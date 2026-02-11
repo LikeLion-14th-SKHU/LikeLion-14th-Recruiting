@@ -1,13 +1,13 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
 
 * {
-  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: #171717;
+  color: #f3f3f3;
 }
