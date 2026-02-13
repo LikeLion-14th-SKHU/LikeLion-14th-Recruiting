@@ -10,7 +10,7 @@ import Results from "./pages/Results.jsx";
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-primary-bg">
         <Header />
         <main className="mx-auto w-full max-w-5xl px-6 py-10">
           <Routes>
