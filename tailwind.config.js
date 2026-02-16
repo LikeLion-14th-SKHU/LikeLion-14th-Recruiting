@@ -6,6 +6,9 @@ export default {
       backgroundImage: {
         gradient: "linear-gradient(to left, #FF4D00, #FFA100)",
       },
+      boxShadow: {
+        "primary-glow": "0px 0px 5px 0px #FF4D00",
+      },
       colors: {
         primary: {
           point1: "#FF3D00",
