@@ -1,3 +1,5 @@
+import ApplyButton from "../components/ApplyButton";
+
 function Recruitment() {
   const welcomePoints = [
     "처음이지만 배우고 싶은 분",
@@ -31,36 +33,31 @@ function Recruitment() {
     },
   ];
 
-  /*
-  Todo
-  컴포넌트 제작 후 적용
-  */
-
   return (
     <section className="bg-primary-bg px-6 pt-18.75 text-text-main md:px-14 md:pt-18.75">
-      <h2 className="w-fit text-5xl font-extrabold bg-gradient bg-clip-text text-transparent">
+      <h2 className="w-fit font-extrabold bg-gradient bg-clip-text text-transparent text-4xl md:text-6xl">
         Recruitment
       </h2>
 
-      <div className="mt-30 space-y-8.75">
+      <div className="mt-10 space-y-8.75">
         <article>
-          <div className="mb-3 h-0.5 w-14 bg-gradient" />
-          <h3 className="text-3xl font-semibold text-text-main">
+          <div className="mb-3 h-0.5 w-25 bg-gradient" />
+          <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
             이런 분을 환영합니다
           </h3>
-          <ul className="mt-2 list-disc space-y-1.5 pl-6 text-lg text-text-sub">
+          <ul className="mt-5 list-disc pl-6 text-lg md:text-2xl text-text-sub">
             {welcomePoints.map((point) => (
               <li key={point}>{point}</li>
             ))}
           </ul>
         </article>
 
-        <article>
-          <div className="mb-3 h-0.5 w-14 bg-gradient" />
-          <h3 className="text-3xl font-semibold text-text-main">
+        <article className="pt-15">
+          <div className="mb-3 h-0.5 w-25 bg-gradient" />
+          <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
             이런 경우는 어려울 수 있어요
           </h3>
-          <ul className="mt-8 list-disc space-y-1.5 pl-6 text-lg text-text-sub">
+          <ul className="mt-5 list-disc pl-6 text-lg md:text-2xl text-text-sub">
             {difficultPoints.map((point) => (
               <li key={point}>{point}</li>
             ))}
@@ -68,25 +65,24 @@ function Recruitment() {
         </article>
       </div>
 
-      <div className="mt-13 grid gap-5 md:grid-cols-2 md:gap-14">
-        <article className="rounded-3xl border-2 border-[#ff9800] bg-[#101114] px-7 py-8">
-          <h4 className="text-center text-3xl font-semibold text-text-main">
+      <div className=" mt-13 pt-15 grid gap-5 md:grid-cols-2 md:gap-14">
+        <article className="w-full rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
+          <h4 className="pt-6.25 text-center text-xl md:text-3xl font-semibold text-text-main">
             모집 대상
           </h4>
-          <div className="mx-auto mt-3 h-0.5 w-24 bg-[#ff9800]" />
-          <ul className="mt-8 list-disc space-y-1.5 pl-6 text-xl text-text-sub">
+          <div className="mx-auto mt-3 h-0.5 w-44 rounded-3xl bg-primary-point2 shadow-primary-glow" />
+          <ul className="mt-6 mb-6 w-fit mx-auto list-disc pl-6 text-lg md:text-2xl text-text-sub">
             <li>성공회대학교 재학생, 휴학생</li>
             <li>전공, 학년 무관</li>
             <li>코딩에 관심있는 사람</li>
           </ul>
         </article>
-
-        <article className="rounded-3xl border-2 border-[#ff9800] bg-[#101114] px-7 py-8">
-          <h4 className="text-center text-3xl font-semibold text-text-main">
+        <article className="rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
+          <h4 className="pt-6.25 text-center text-xl md:text-3xl font-semibold text-text-main">
             활동 조건
           </h4>
-          <div className="mx-auto mt-3 h-0.5 w-24 bg-[#ff9800]" />
-          <ul className="mt-8 list-disc space-y-1.5 pl-6 text-xl text-text-sub">
+          <div className="mx-auto mt-3 h-0.5 w-44 rounded-3xl bg-primary-point2 shadow-primary-glow" />
+          <ul className="mt-6 mb-6 w-fit mx-auto list-disc pl-6 text-lg md:text-2xl text-text-sub">
             <li>매주 2회 정기 세션 필참</li>
             <li>아이디어톤, 해커톤 활동 필참</li>
           </ul>
@@ -94,17 +90,20 @@ function Recruitment() {
       </div>
 
       <article className="mt-30">
-        <div className="mb-3 h-0.5 w-14 bg-gradient" />
-        <h3 className="text-4xl font-semibold text-text-main">모집 일정</h3>
+        <div className="mb-3 h-0.5 w-25 bg-gradient" />
+        <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
+          모집 일정
+        </h3>
 
         <div className="mt-8 md:hidden">
-          <div className="space-y-4 border-l-2 border-[#ff9800] pl-5">
+          <div className="space-y-6 border-l-2 border-primary-point2 pl-8">
             {timeline.map((item) => (
-              <div key={item.title}>
+              <div key={item.title} className="relative">
+                <span className="absolute -left-10.25 top-2 h-4 w-4 rounded-full border-2 border-primary-point2 bg-primary-bg shadow-primary-glow" />
                 <p className="text-xl font-semibold text-text-sub">
                   {item.title}
                 </p>
-                <p className="text-sm text-text-sub">{item.date}</p>
+                <p className="mt-1 text-sm text-text-sub">{item.date}</p>
               </div>
             ))}
           </div>
@@ -115,7 +114,7 @@ function Recruitment() {
           <div className="grid grid-cols-4">
             {timeline.map((item, index) => (
               <div key={item.title} className="relative flex justify-center">
-                <span className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border-2 border-[#ff9800] bg-[#0b0c0e]" />
+                <span className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border-2 border-primary-point2 bg-primary-bg shadow-primary-glow" />
                 <div className={index % 2 === 0 ? "mb-20" : "mt-20"}>
                   <p className="text-2xl font-semibold">{item.title}</p>
                   <p className="text-base text-text-sub">{item.date}</p>
@@ -127,17 +126,12 @@ function Recruitment() {
       </article>
 
       <article className="mt-27.5 pb-12.5">
-        <p className="text-2xl leading-relaxed text-text-main">
+        <p className="text-2xl text-text-main">
           위 내용을 확인하셨다면
           <br />
           지원서를 작성해 주세요
         </p>
-        <button
-          type="button"
-          className="mt-4.25 rounded-lg border px-7 py-3 text-xl font-semibold text-[#ff9800] transition-colors hover:bg-[#ff9800] hover:text-[#0b0c0e]"
-        >
-          지원하러 가기
-        </button>
+        <ApplyButton />
       </article>
     </section>
   );
