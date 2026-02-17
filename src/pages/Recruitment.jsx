@@ -34,7 +34,7 @@ function Recruitment() {
   ];
 
   return (
-    <section className="bg-primary-bg px-6 pt-18.75 text-text-main md:px-14 md:pt-18.75">
+    <section className="bg-primary-bg pt-18.75 md:mx-30 mx-5  text-text-main md:pt-18.75">
       <h2 className="w-fit font-extrabold bg-gradient bg-clip-text text-transparent text-4xl md:text-6xl">
         Recruitment
       </h2>
@@ -66,23 +66,23 @@ function Recruitment() {
       </div>
 
       <div className=" mt-13 pt-15 grid gap-5 md:grid-cols-2 md:gap-14">
-        <article className="w-full rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
-          <h4 className="pt-6.25 text-center text-xl md:text-3xl font-semibold text-text-main">
+        <article className="w-[90%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
+          <h4 className="pt-6.25 text-center text-2xl md:text-3xl font-semibold text-text-main">
             모집 대상
           </h4>
           <div className="mx-auto mt-3 h-0.5 w-44 rounded-3xl bg-primary-point2 shadow-primary-glow" />
-          <ul className="mt-6 mb-6 w-fit mx-auto list-disc pl-6 text-lg md:text-2xl text-text-sub">
+          <ul className="mt-6 mb-6 w-fit mx-auto list-disc pl-6 text-xl md:text-2xl text-text-sub">
             <li>성공회대학교 재학생, 휴학생</li>
             <li>전공, 학년 무관</li>
             <li>코딩에 관심있는 사람</li>
           </ul>
         </article>
-        <article className="rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
-          <h4 className="pt-6.25 text-center text-xl md:text-3xl font-semibold text-text-main">
+        <article className="w-[90%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
+          <h4 className="pt-6.25 text-center text-2xl md:text-3xl font-semibold text-text-main">
             활동 조건
           </h4>
           <div className="mx-auto mt-3 h-0.5 w-44 rounded-3xl bg-primary-point2 shadow-primary-glow" />
-          <ul className="mt-6 mb-6 w-fit mx-auto list-disc pl-6 text-lg md:text-2xl text-text-sub">
+          <ul className="mt-6 mb-6 w-fit mx-auto list-disc pl-6 text-xl md:text-2xl text-text-sub">
             <li>매주 2회 정기 세션 필참</li>
             <li>아이디어톤, 해커톤 활동 필참</li>
           </ul>
@@ -126,7 +126,7 @@ function Recruitment() {
       </article>
 
       <article className="mt-27.5 pb-12.5">
-        <p className="text-2xl text-text-main">
+        <p className="text-xl text-text-main">
           위 내용을 확인하셨다면
           <br />
           지원서를 작성해 주세요
