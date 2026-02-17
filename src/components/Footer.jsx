@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-[1440px] h-[220px] bg-primary-bg flex items-center justify-between px-[120px] mx-auto">
+    <footer className="w-[1440px] h-[220px] bg-primary-bg items-center justify-between px-30 mx-auto hidden md:flex">
       {/* Contact Section */}
       <div className="flex flex-col gap-6">
         <h3 className="text-primary-point2 text-2xl font-bold ml-10">
