@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-primary-bg">
         <Header />
-        <main className="mx-auto w-full max-w-5xl px-6 py-10">
+        <main className="mx-auto w-full max-w-[1440px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
