@@ -6,6 +6,7 @@ import Activity from "./pages/Activity.jsx";
 import Recruitment from "./pages/Recruitment.jsx";
 import Apply from "./pages/Apply.jsx";
 import Results from "./pages/Results.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );
