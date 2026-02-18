@@ -13,7 +13,12 @@ const Footer = () => {
               alt="Instagram"
               className="w-6 h-6"
             />
-            <span className="text-text-main text-base">@likelion_skhu</span>
+            <a
+              className="text-text-main text-base"
+              href="https://www.instagram.com/likelion_skhu/"
+            >
+              @likelion_skhu
+            </a>
           </div>
           <div className="flex items-center gap-3">
             <img
@@ -21,9 +26,12 @@ const Footer = () => {
               alt="GitHub"
               className="w-6 h-6"
             />
-            <span className="text-text-main text-base">
+            <a
+              className="text-text-main text-base"
+              href="https://github.com/LikeLion-14th-SKHU"
+            >
               @LikeLion-14th-SKHU
-            </span>
+            </a>
           </div>
         </div>
       </div>
