@@ -65,8 +65,8 @@ function Recruitment() {
         </article>
       </div>
 
-      <div className=" mt-13 pt-15 grid md:grid-cols-2">
-        <article className="md:w-[70%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
+      <div className=" mt-13 pt-15 grid md:grid-cols-2 gap-6.25 md:gap-0">
+        <article className="md:w-[70%] w-[80%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
           <h4 className="pt-6.25 text-center text-2xl md:text-3xl font-semibold text-text-main">
             모집 대상
           </h4>
@@ -77,7 +77,7 @@ function Recruitment() {
             <li>코딩에 관심있는 사람</li>
           </ul>
         </article>
-        <article className="md:w-[70%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
+        <article className="md:w-[70%] w-[80%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
           <h4 className="pt-6.25 text-center text-2xl md:text-3xl font-semibold text-text-main">
             활동 조건
           </h4>
