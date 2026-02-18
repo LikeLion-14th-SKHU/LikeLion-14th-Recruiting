@@ -35,11 +35,11 @@ function Recruitment() {
 
   return (
     <section className="bg-primary-bg pt-18.75 md:mx-30 mx-5  text-text-main md:pt-18.75">
-      <h2 className="w-fit font-extrabold bg-gradient bg-clip-text text-transparent text-4xl md:text-6xl">
+      <h2 className="w-fit font-bold bg-gradient bg-clip-text text-transparent text-4xl md:text-[64px]">
         Recruitment
       </h2>
 
-      <div className="mt-10 space-y-8.75">
+      <div className="pt-15 space-y-8.75">
         <article>
           <div className="mb-3 h-0.5 w-25 bg-gradient" />
           <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
@@ -65,8 +65,8 @@ function Recruitment() {
         </article>
       </div>
 
-      <div className=" mt-13 pt-15 grid gap-5 md:grid-cols-2 md:gap-14">
-        <article className="w-[90%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
+      <div className=" mt-13 pt-15 grid md:grid-cols-2">
+        <article className="md:w-[70%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
           <h4 className="pt-6.25 text-center text-2xl md:text-3xl font-semibold text-text-main">
             모집 대상
           </h4>
@@ -77,7 +77,7 @@ function Recruitment() {
             <li>코딩에 관심있는 사람</li>
           </ul>
         </article>
-        <article className="w-[90%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
+        <article className="md:w-[70%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
           <h4 className="pt-6.25 text-center text-2xl md:text-3xl font-semibold text-text-main">
             활동 조건
           </h4>
@@ -89,7 +89,7 @@ function Recruitment() {
         </article>
       </div>
 
-      <article className="mt-30">
+      <article className="pt-30">
         <div className="mb-3 h-0.5 w-25 bg-gradient" />
         <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
           모집 일정
@@ -125,8 +125,8 @@ function Recruitment() {
         </div>
       </article>
 
-      <article className="mt-27.5 pb-12.5">
-        <p className="text-xl text-text-main">
+      <article className="mt-27.5 pb-7.5">
+        <p className="text-2xl text-text-main">
           위 내용을 확인하셨다면
           <br />
           지원서를 작성해 주세요
