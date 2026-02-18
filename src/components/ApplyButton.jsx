@@ -8,7 +8,7 @@ export default function ApplyButton() {
       <button
         type="button"
         onClick={() => navigate("/apply")}
-        className="w-full rounded-lg bg-primary-bg px-7 py-3 text-xl font-semibold text-primary-point2 transition duration-600 hover:bg-gradient hover:text-primary-bg"
+        className="w-full rounded-lg bg-primary-bg py-2 text-xl font-semibold text-primary-point2 transition duration-600 hover:bg-gradient hover:text-primary-bg"
       >
         지원하러 가기
       </button>
