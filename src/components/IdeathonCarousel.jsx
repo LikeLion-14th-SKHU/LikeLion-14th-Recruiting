@@ -18,26 +18,26 @@ function IdeathonCarousel({ title, projects }) {
   const current = projects[Math.min(activeIndex, projects.length - 1)];
 
   return (
-    <article className="pt-15">
+    <article className="md:pt-15">
       <div className="mb-3 h-0.5 w-25 bg-gradient" />
       <h3 className="text-2xl md:text-5xl font-semibold text-text-main">
         {title}
       </h3>
 
-      <div className="relative mt-10">
-        <div className="relative mx-auto h-100 px-2.5 overflow-visible">
+      <div className="relative pt-3 md:mt-10">
+        <div className="relative mx-auto md:h-100 px-2.5 overflow-visible">
           <button
             ref={prevRef}
-            className="absolute left-45 top-1/2 z-30 -translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
+            className="absolute left-0 top-15 md:left-45 md:top-1/2 z-30 md:-translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
           >
-            <FaChevronLeft className="size-7" />
+            <FaChevronLeft className="size-3 md:size-7" />
           </button>
 
           <button
             ref={nextRef}
-            className="absolute right-45 top-1/2 z-30 -translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
+            className="absolute right-0 top-15 md:right-45 md:top-1/2 z-30 md:-translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
           >
-            <FaChevronRight className="size-7" />
+            <FaChevronRight className="size-3 md:size-7" />
           </button>
 
           <Swiper
@@ -88,14 +88,14 @@ function IdeathonCarousel({ title, projects }) {
             {projects.map((p, idx) => (
               <SwiperSlide
                 key={p.id}
-                className="w-175! h-full! py-3 flex items-center justify-center"
+                className="md:w-175! h-full! py-3 flex items-center justify-center"
               >
                 <div
                   className={[
                     "mx-auto overflow-hidden bg-black/10 transition-all duration-300",
                     idx === activeIndex
-                      ? "w-175 h-100 rounded-2xl opacity-95 shadow-[0_0_10px_2px_rgba(255,161,0,1)]"
-                      : "w-fit h-65 top-1/2",
+                      ? "w-70 h-35 md:w-175 md:h-100 rounded-2xl opacity-95 shadow-[0_0_10px_2px_rgba(255,161,0,1)]"
+                      : "hidden md:flex w-fit h-65 top-1/2",
                   ].join(" ")}
                 >
                   <img
@@ -109,14 +109,14 @@ function IdeathonCarousel({ title, projects }) {
           </Swiper>
         </div>
 
-        <div className="w-156.25 mx-auto pt-22.5">
-          <h4 className="text-4xl font-semibold tracking-tight text-text-main md:text-[48px]">
+        <div className="w-74 md:w-156.25 mx-auto pt-5 md:pt-22.5">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tight text-text-main md:text-[48px]">
             {current.title}
           </h4>
-          <p className="mt-3 text-xl text-text-sub md:text-[32px]">
+          <p className="mt-3 text-lg md:text-xl text-text-sub md:text-[32px]">
             {current.subtitle}
           </p>
-          <p className="mt-2 text-base text-text-sub/50 md:text-[24px]">
+          <p className="mt-2 text-sm md:text-base text-text-sub/50 md:text-[24px]">
             {current.members}
           </p>
         </div>

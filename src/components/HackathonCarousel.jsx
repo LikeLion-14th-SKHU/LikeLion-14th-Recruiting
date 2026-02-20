@@ -17,23 +17,23 @@ function HackathonCarousel({ title, projects }) {
     projects[Math.min(activeIndex, projects.length - 1)] ?? projects[0];
 
   return (
-    <article className="pt-15 overflow-hidden">
-      <div className="mb-3 h-0.5 w-25 bg-gradient mx-auto md:mx-0" />
-      <h3 className="text-2xl md:text-4xl font-semibold mb-10">{title}</h3>
+    <article className="pt-10 md:pt-15 overflow-hidden">
+      <div className="mb-3 h-0.5 w-25 bg-gradient md:mx-auto mx-0" />
+      <h3 className="text-2xl md:text-4xl font-semibold md:mb-10">{title}</h3>
 
-      <div className="relative mx-auto h-180 w-full max-w-6xl overflow-hidden flex items-center justify-center">
+      <div className="relative mx-auto md:h-180 w-full max-w-6xl overflow-hidden flex items-center justify-center">
         <button
           ref={prevRef}
-          className="absolute left-73 top-80 z-40 -translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
+          className="absolute left-0 top-80 z-40 -translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
         >
-          <FaChevronLeft className="size-7" />
+          <FaChevronLeft className="size-3 md:size-7" />
         </button>
 
         <button
           ref={nextRef}
-          className="absolute right-73 top-80 z-40 -translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
+          className="absolute right-0 top-80 z-40 -translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
         >
-          <FaChevronRight className="size-7" />
+          <FaChevronRight className="size-3 md:size-7" />
         </button>
 
         <Swiper
@@ -77,7 +77,9 @@ function HackathonCarousel({ title, projects }) {
                       isActive
                         ? "z-30 scale-100 opacity-100"
                         : "z-10 scale-75 opacity-80",
-                      isActive && p.frame === "desktop" ? "scale-150" : "",
+                      isActive && p.frame === "desktop"
+                        ? "scale-120 md:scale-150"
+                        : "",
                     ].join(" ")}
                   >
                     <div
@@ -108,7 +110,7 @@ function HackathonCarousel({ title, projects }) {
         </Swiper>
       </div>
 
-      <div className="w-156.25 mx-auto text-center">
+      <div className="md:w-156.25 mx-auto text-center">
         <h4 className="text-4xl font-semibold tracking-tight text-text-main md:text-[48px]">
           {current.title}
         </h4>

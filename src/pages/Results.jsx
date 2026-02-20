@@ -217,12 +217,12 @@ function Results() {
   }, []);
 
   return (
-    <section className="bg-primary-bg pt-18.75 md:mx-30 mx-5 text-text-main md:pt-18.75">
+    <section className="bg-primary-bg pt-5.5 md:mx-30 mx-5 text-text-main md:pt-18.75">
       <h2 className="w-fit font-bold bg-gradient bg-clip-text text-transparent text-4xl md:text-[64px]">
         Results
       </h2>
 
-      <div className="pt-15 space-y-8.75">
+      <div className="pt-5 md:pt-15 space-y-8.75">
         <IdeathonCarousel
           title="아이디어톤 결과물"
           projects={ideathonProjects}
@@ -230,9 +230,9 @@ function Results() {
         <HackathonCarousel title="해커톤 결과물" projects={hackathonProjects} />
       </div>
 
-      <article className="pt-30">
+      <article className="pt-20 md:pt-30">
         <div className="mb-3 h-0.5 w-25 bg-gradient" />
-        <h3 className="text-2xl md:text-5xl font-semibold text-text-main">
+        <h3 className="text-3xl md:text-5xl font-semibold text-text-main">
           선배들의 한 마디
         </h3>
 
@@ -242,7 +242,7 @@ function Results() {
       </article>
 
       <article className="mt-15 pb-7.5">
-        <p className="text-2xl text-text-main">
+        <p className="text-xl font-medium md:text-2xl text-text-main">
           이 기록을
           <br />
           다음 이야기로 이어갈 분들을 찾고 있습니다

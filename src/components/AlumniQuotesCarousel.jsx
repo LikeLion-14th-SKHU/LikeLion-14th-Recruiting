@@ -25,7 +25,7 @@ function AlumniQuotesCarousel({ alumniQuotes }) {
 
   return (
     <div className="relative">
-      <div className="absolute right-8 flex gap-4 z-50">
+      <div className="absolute right-4 md:right-8 flex gap-4 z-50">
         <button
           ref={prevRef}
           className="rounded-full border border-white bg-black/20 p-3 text-white backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
@@ -55,10 +55,6 @@ function AlumniQuotesCarousel({ alumniQuotes }) {
             slidesPerView: 1,
             spaceBetween: 16,
           },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 16,
-          },
           1024: {
             slidesPerView: 3,
             spaceBetween: 20,
@@ -74,7 +70,7 @@ function AlumniQuotesCarousel({ alumniQuotes }) {
           <SwiperSlide key={alumniQuote.id} className="h-auto pt-15">
             <div className="border-3 border-primary-point2 shadow-primary-glow rounded-4xl p-8 bg-primary-bg backdrop-blur-[20px] h-full min-h-70 flex flex-col">
               <div className="flex-1 flex items-center justify-center text-center leading-9">
-                <p className="md:text-xl text-text-sub leading-relaxed">
+                <p className="text-xl md:text-xl text-text-sub leading-relaxed">
                   {alumniQuote.content}
                 </p>
               </div>
