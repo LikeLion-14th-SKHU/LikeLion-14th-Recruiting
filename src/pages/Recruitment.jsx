@@ -34,12 +34,12 @@ function Recruitment() {
   ];
 
   return (
-    <section className="bg-primary-bg pt-18.75 md:mx-30 mx-5  text-text-main md:pt-18.75">
+    <section className="bg-primary-bg pt-5.5 md:mx-30 mx-5  text-text-main md:pt-18.75">
       <h2 className="w-fit font-bold bg-gradient bg-clip-text text-transparent text-4xl md:text-[64px]">
         Recruitment
       </h2>
 
-      <div className="pt-15 space-y-8.75">
+      <div className="pt-5 md:pt-15 space-y-8.75">
         <article>
           <div className="mb-3 h-0.5 w-25 bg-gradient" />
           <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
