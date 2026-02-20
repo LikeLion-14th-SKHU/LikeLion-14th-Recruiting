@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const navItems = [
@@ -12,11 +12,56 @@ const navItems = [
 function Header() {
   const [hoveredTo, setHoveredTo] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const navRef = useRef(null);
+  const linkRefs = useRef({});
+  const [underline, setUnderline] = useState({ x: 0, width: 0, opacity: 0 });
+
+  React.useEffect(() => {
+    setHoveredTo(null);
+  }, [location.pathname]);
+
+  const activeTo =
+    navItems.find((it) => it.to === location.pathname)?.to ?? null;
+
+  const updateUnderline = () => {
+    const navEl = navRef.current;
+    const to = hoveredTo ?? activeTo;
+    const linkEl = to ? linkRefs.current[to] : null;
+
+    if (!navEl || !linkEl) {
+      setUnderline((prev) => ({ ...prev, opacity: 0 }));
+      return;
+    }
+
+    const navRect = navEl.getBoundingClientRect();
+    const linkRect = linkEl.getBoundingClientRect();
+
+    setUnderline({
+      x: linkRect.left - navRect.left,
+      width: linkRect.width,
+      opacity: 1,
+    });
+  };
+
+  useLayoutEffect(() => {
+    updateUnderline();
+    requestAnimationFrame(updateUnderline);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, hoveredTo]);
+
+  useEffect(() => {
+    const onResize = () => updateUnderline();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, hoveredTo]);
 
   return (
     <>
       {/* 데스크탑 헤더 */}
-      <header className="sticky top-0 z-40 w-full mx-auto border-b border-[#323232] bg-primary-bg/50 backdrop-blur-xl">
+      <header className="sticky top-0 z-100 w-full mx-auto border-b border-[#323232] bg-primary-bg/50 backdrop-blur-xl">
         <div className="mx-auto flex max-w-360 items-center justify-between md:px-30 px-4.5 py-5">
           <NavLink to="/" className="flex items-center gap-3">
             <img
@@ -30,6 +75,7 @@ function Header() {
           </NavLink>
 
           <nav
+            ref={navRef}
             className="relative hidden items-center gap-10 md:flex"
             onMouseLeave={() => setHoveredTo(null)}
           >
@@ -39,6 +85,9 @@ function Header() {
                 to={to}
                 end={end}
                 onMouseEnter={() => setHoveredTo(to)}
+                ref={(el) => {
+                  if (el) linkRefs.current[to] = el;
+                }}
                 className={({ isActive }) =>
                   [
                     "relative px-1 py-1 text-xl font-normal tracking-tight transition-colors",
@@ -48,29 +97,19 @@ function Header() {
                   ].join(" ")
                 }
               >
-                {({ isActive }) => {
-                  const showUnderline = hoveredTo ? hoveredTo === to : isActive;
-
-                  return (
-                    <>
-                      <span className="relative z-10">{label}</span>
-
-                      {showUnderline && (
-                        <motion.span
-                          layoutId="nav-underline"
-                          className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-white"
-                          transition={{
-                            type: "spring",
-                            stiffness: 600,
-                            damping: 45,
-                          }}
-                        />
-                      )}
-                    </>
-                  );
-                }}
+                <span className="relative z-10">{label}</span>
               </NavLink>
             ))}
+
+            <motion.div
+              className="absolute -bottom-1 h-0.5 rounded-full bg-white"
+              animate={{
+                x: underline.x,
+                width: underline.width,
+                opacity: underline.opacity,
+              }}
+              transition={{ type: "spring", stiffness: 600, damping: 45 }}
+            />
 
             <div className="inline-block rounded-lg bg-gradient p-0.5">
               <NavLink
