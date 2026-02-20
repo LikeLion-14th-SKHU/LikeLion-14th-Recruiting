@@ -37,13 +37,13 @@ const Footer = () => {
       </div>
 
       {/* Logo Section */}
-      <div>
+      <div className="md:mr-9">
         <img src="../img/푸터멋사로고.png" alt="Logo" className="w-auto h-24" />
       </div>
 
       {/* Credits Section */}
       <div className="flex flex-col gap-6">
-        <h3 className="text-primary-point2 text-2xl font-bold text-right mr-10">
+        <h3 className="text-primary-point2 text-2xl font-bold text-right mr-7">
           Credits
         </h3>
         <div className="flex flex-col gap-1 text-base text-right text-text-main">
