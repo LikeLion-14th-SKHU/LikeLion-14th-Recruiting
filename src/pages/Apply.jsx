@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { FaCaretDown } from "react-icons/fa";
 
 const RECRUIT_START = new Date("2026-02-16T00:00:00");
 const RECRUIT_END = new Date("2026-03-31T23:59:59");
@@ -268,7 +269,7 @@ function Apply() {
                           ].join(" ")}
                           aria-hidden="true"
                         >
-                          ⬇
+                          <FaCaretDown />
                         </span>
                       </button>
 
