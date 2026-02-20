@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-[1440px] h-[220px] bg-primary-bg flex items-center justify-between px-[120px] mx-auto">
+    <footer className="w-[1440px] h-[220px] bg-primary-bg items-center justify-between px-30 mx-auto hidden md:flex">
       {/* Contact Section */}
       <div className="flex flex-col gap-6">
         <h3 className="text-primary-point2 text-2xl font-bold ml-10">
@@ -13,7 +13,12 @@ const Footer = () => {
               alt="Instagram"
               className="w-6 h-6"
             />
-            <span className="text-text-main text-base">@likelion_skhu</span>
+            <a
+              className="text-text-main text-base"
+              href="https://www.instagram.com/likelion_skhu/"
+            >
+              @likelion_skhu
+            </a>
           </div>
           <div className="flex items-center gap-3">
             <img
@@ -21,9 +26,12 @@ const Footer = () => {
               alt="GitHub"
               className="w-6 h-6"
             />
-            <span className="text-text-main text-base">
+            <a
+              className="text-text-main text-base"
+              href="https://github.com/LikeLion-14th-SKHU"
+            >
               @LikeLion-14th-SKHU
-            </span>
+            </a>
           </div>
         </div>
       </div>
