@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // ✅ 모집 시작일 / 마감일 여기서 수정하세요
 const RECRUIT_START = new Date("2026-02-16T00:00:00");
-const RECRUIT_END = new Date("2026-03-31T23:59:59");
+const RECRUIT_END = new Date("2026-03-06T23:59:59");
 
 function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -62,33 +62,30 @@ function Home() {
     <section className="w-[1440px] mx-auto bg-primary-bg min-h-screen flex flex-col justify-center px-[120px] py-24">
       {/* 상단 타이틀 */}
       <div className="mb-10">
-        <p className="text-text-main text-2xl font-bold tracking-widest mb-4">
+        <p className="text-text-main text-4xl font-bold tracking-widest mb-4">
           "GROWL TO GROWTH"
         </p>
-        <hr className="border-text-main w-72" />
+        <hr className="border-text-main w-115 border-t-3" />
       </div>
-
       {/* 메인 카피 */}
       <h1 className="text-primary-point2 text-5xl font-extrabold leading-tight mb-8">
         처음이어도 괜찮습니다
         <br />
         함께 성장하는 경험이 있으니까요
       </h1>
-
       {/* 서브 텍스트 */}
       <p className="text-text-sub text-lg leading-relaxed mb-24">
         멋쟁이 사자처럼은 프로젝트와 팀 활동 통해
         <br />
         배움이 경험이 되는 동아리입니다.
       </p>
-
       {/* 버튼 영역 */}
       <div className="flex items-center gap-5">
         {/* 지원하기 버튼 */}
         <button
           disabled={!isActive}
           className={`
-            px-10 py-5 rounded-xl text-white text-2xl font-extrabold transition-all duration-300
+            h-[97px] w-[289px] px-10 py-5 rounded-xl text-white text-[30px] font-extrabold transition-all duration-300
             ${
               isActive
                 ? "bg-gradient cursor-pointer hover:opacity-90 hover:scale-[1.02] shadow-primary-glow"
@@ -98,30 +95,26 @@ function Home() {
         >
           14기 지원하기
         </button>
-
-        {/* 말풍선 카운트다운 */}
-        <div className="relative flex items-center ">
-          {/* 화살표 (말풍선 꼬리) */}
-          <div
-            className="w-0 h-0 "
-            style={{
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderRight: "16px solid #FFA100",
-            }}
+        {/* 말풍선 이미지 + 카운트다운 텍스트 오버레이 */}
+        <div className="relative flex items-center">
+          <img
+            src="../img/홈말풍선.png"
+            alt="말풍선"
+            className="h-[75px] w-auto object-contain"
           />
-          {/* 말풍선 본체 */}
-          <div
-            className="px-8 py-5 rounded-xl border-2 text-xl font-bold "
+          <span
+            className="absolute inset-0 flex items-center justify-center text-[1.6rem] font-semibold pl-7"
             style={{
-              borderImage: "linear-gradient(to left, #FF4D00, #FFA100) 1",
-              color: "#FFA100",
+              background: "linear-gradient(to left, #FF4D00, #FFA100)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
             }}
           >
             {countdownText}
-          </div>
+          </span>
         </div>
-      </div>
+      </div>{" "}
     </section>
   );
 }
