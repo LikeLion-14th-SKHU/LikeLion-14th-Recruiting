@@ -229,7 +229,7 @@ function Activity() {
           <button
             key={tab}
             onClick={() => scrollToSection(tab)}
-            className="px-5 md:px-6 md:w-[221px] shadow-primary-glow md:h-[96px] md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm  font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300"
+            className="px-5 md:px-6 md:w-[221px] md:ml-0 ml-7 mr-[-27px] w-[130px] h-[47px] shadow-primary-glow md:h-[96px] md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm  font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300"
           >
             {tab}
           </button>
@@ -351,25 +351,16 @@ function Activity() {
           {section.images.length > 0 && (
             <div className="relative flex items-center justify-center">
               {/* 왼쪽 화살표 */}
+
               <button
                 onClick={() => handlePrevSlide(section.id)}
-                className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-primary-point2 text-primary-point2 hover:bg-primary-point2 hover:text-white transition-all duration-300 z-30 flex-shrink-0 mr-2.5"
+                className="z-30 flex-shrink-0 mr-2.5"
               >
-                <svg
-                  width="12"
-                  height="20"
-                  viewBox="0 0 12 20"
-                  fill="none"
-                  className="w-3 h-5"
-                >
-                  <path
-                    d="M10 2L2 10L10 18"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <img
+                  src="../img/모바일왼쪽화살표.png"
+                  alt="이전"
+                  className="w-6 h-6 md:w-10 md:h-10"
+                />
               </button>
 
               {/* 이미지 컨테이너 */}
@@ -448,23 +439,13 @@ function Activity() {
               {/* 오른쪽 화살표 */}
               <button
                 onClick={() => handleNextSlide(section.id)}
-                className="w-8 h-8 flex items-center justify-center rounded-full border-2 border-primary-point2 text-primary-point2 hover:bg-primary-point2 hover:text-white transition-all duration-300 z-30 flex-shrink-0 ml-2.5"
+                className="z-30 flex-shrink-0 ml-2.5"
               >
-                <svg
-                  width="12"
-                  height="20"
-                  viewBox="0 0 12 20"
-                  fill="none"
-                  className="w-3 h-5"
-                >
-                  <path
-                    d="M2 2L10 10L2 18"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <img
+                  src="../img/모바일오른쪽화살표.png"
+                  alt="다음"
+                  className="w-6 h-6 md:w-10 md:h-10"
+                />
               </button>
             </div>
           )}
