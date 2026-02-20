@@ -1,4 +1,4 @@
-import ApplyButton from "../components/ApplyButton";
+import NextButton from "../components/NextButton";
 
 function Recruitment() {
   const welcomePoints = [
@@ -131,7 +131,7 @@ function Recruitment() {
           <br />
           지원서를 작성해 주세요
         </p>
-        <ApplyButton />
+        <NextButton to="/apply">지원하러 가기</NextButton>
       </article>
     </section>
   );
