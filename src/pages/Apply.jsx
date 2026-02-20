@@ -1,19 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
-import { FaCaretDown } from "react-icons/fa";
-
-const RECRUIT_START = new Date("2026-02-16T00:00:00");
-const RECRUIT_END = new Date("2026-03-31T23:59:59");
+import { useMemo } from "react";
+import ApplySection from "../components/ApplySection";
+import FaqSection from "../components/FaqSection";
 
 function Apply() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-  const [isActive, setIsActive] = useState(false);
-  const [isEnded, setIsEnded] = useState(false);
-
   const howToApply = [
     "지원은 구글 설문조사 폼을 통해 진행됩니다",
     "아래 버튼을 누르면 외부 설문 페이지로 이동합니다",
@@ -112,53 +101,6 @@ function Apply() {
     [],
   );
 
-  const [openKey, setOpenKey] = useState(null);
-
-  const toggleFaq = (key) => {
-    setOpenKey((prev) => (prev === key ? null : key));
-  };
-
-  useEffect(() => {
-    const tick = () => {
-      const now = new Date();
-
-      if (now < RECRUIT_START) {
-        setIsActive(false);
-        setIsEnded(false);
-        const diff = RECRUIT_START - now;
-        setTimeLeft(calcTime(diff));
-      } else if (now >= RECRUIT_START && now <= RECRUIT_END) {
-        setIsActive(true);
-        setIsEnded(false);
-        const diff = RECRUIT_END - now;
-        setTimeLeft(calcTime(diff));
-      } else {
-        setIsActive(false);
-        setIsEnded(true);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-      }
-    };
-
-    tick();
-    const interval = setInterval(tick, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const calcTime = (diff) => ({
-    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-    minutes: Math.floor((diff / (1000 * 60)) % 60),
-    seconds: Math.floor((diff / 1000) % 60),
-  });
-
-  const pad = (n) => String(n).padStart(2, "0");
-
-  const countdownText = isEnded
-    ? "모집이 종료되었습니다"
-    : `마감까지 ${pad(timeLeft.days)}D-${pad(timeLeft.hours)}H-${pad(
-        timeLeft.minutes,
-      )}M-${pad(timeLeft.seconds)}S`;
-
   return (
     <section className="bg-primary-bg pt-18.75 md:mx-30 mx-5  text-text-main md:pt-18.75">
       <h2 className="w-fit font-bold bg-gradient bg-clip-text text-transparent text-4xl md:text-[64px]">
@@ -191,104 +133,9 @@ function Apply() {
         </article>
       </div>
 
-      <div className="pt-22 pl-13 flex flex-col md:flex-row md:items-center gap-5">
-        <button
-          disabled={!isActive}
-          className={`
-            px-10 py-5 rounded-xl text-white text-2xl font-extrabold transition-all duration-300
-            ${
-              isActive
-                ? "bg-gradient cursor-pointer hover:opacity-90 hover:scale-[1.02] shadow-primary-glow"
-                : "bg-gray-600 cursor-not-allowed opacity-50"
-            }
-          `}
-        >
-          14기 지원하기
-        </button>
+      <ApplySection />
 
-        <div className="relative flex items-center">
-          <div
-            className="w-0 h-0"
-            style={{
-              borderTop: "12px solid transparent",
-              borderBottom: "12px solid transparent",
-              borderRight: "16px solid #FFA100",
-            }}
-          />
-          <div
-            className="px-8 py-5 rounded-xl border-2 text-xl font-bold"
-            style={{
-              borderImage: "linear-gradient(to left, #FF4D00, #FFA100) 1",
-              color: "#FFA100",
-            }}
-          >
-            {countdownText}
-          </div>
-        </div>
-      </div>
-
-      <article className="pt-30">
-        <div className="mb-3 h-0.5 w-25 bg-gradient" />
-        <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
-          자주 묻는 질문 (FAQ)
-        </h3>
-        <div className="mt-8 space-y-8">
-          {faqSections.map((sec) => (
-            <div key={sec.section} className="space-y-4">
-              <h4 className="text-xl md:text-2xl font-bold text-text-main">
-                [{sec.section}]
-              </h4>
-
-              <div className="space-y-3">
-                {sec.items.map((item, idx) => {
-                  const key = `${sec.section}-${idx}`;
-                  const isOpen = openKey === key;
-
-                  return (
-                    <div
-                      key={key}
-                      className="rounded-2xl border border-white/10 bg-white/5"
-                    >
-                      <button
-                        type="button"
-                        onClick={() => toggleFaq(key)}
-                        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
-                        aria-expanded={isOpen}
-                      >
-                        <span className="text-base md:text-xl font-semibold text-text-main">
-                          Q. {item.q}
-                        </span>
-
-                        <span
-                          className={[
-                            "shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15",
-                            "transition-transform duration-300",
-                            isOpen
-                              ? "rotate-180 text-primary-point2"
-                              : "text-white/70",
-                          ].join(" ")}
-                          aria-hidden="true"
-                        >
-                          <FaCaretDown />
-                        </span>
-                      </button>
-
-                      {isOpen && (
-                        <div className="px-5 pb-5">
-                          <div className="h-px w-full bg-white/10 mb-4" />
-                          <p className="text-sm md:text-lg leading-relaxed text-text-sub">
-                            {item.a}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-      </article>
+      <FaqSection faqSections={faqSections} />
 
       <article className="pt-30">
         <div className="mb-3 h-0.5 w-25 bg-gradient" />
