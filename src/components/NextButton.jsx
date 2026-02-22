@@ -8,11 +8,9 @@ export default function NextButton({ children, onClick, to }) {
       <button
         type="button"
         onClick={onClick ? onClick : () => navigate(to)}
-        className="w-full rounded-lg text-[12px] bg-primary-bg py-2 md:text-[24px] font-semibold text-primary-point2 transition duration-600 hover:bg-gradient hover:text-primary-bg"
+        className="w-full cursor-pointer rounded-lg text-[12px] bg-primary-bg py-2 md:text-[24px] font-semibold text-primary-point2 transition duration-600 hover:bg-gradient hover:text-primary-bg"
       >
-        <div className="w-full mx-auto bg-gradient bg-clip-text text-transparent hover:text-primary-bg">
-          {children}
-        </div>
+        {children}
       </button>
     </div>
   );

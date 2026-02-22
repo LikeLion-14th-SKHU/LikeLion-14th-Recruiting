@@ -62,7 +62,7 @@ function ApplySection() {
         className={`
             w-29.5 md:w-72.25 h-10.5 md:h-24.25 px-2 md:px-10 py-2 md:py-5 
             rounded-xl text-white text-[15px] md:text-[30px] font-bold 
-            transition-all duration-300
+            transition-all duration-300 
             ${
               isActive
                 ? "bg-gradient cursor-pointer hover:opacity-90 hover:scale-[1.02] shadow-primary-glow"

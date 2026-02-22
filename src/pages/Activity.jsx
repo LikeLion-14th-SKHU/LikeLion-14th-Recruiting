@@ -296,7 +296,7 @@ function Activity() {
               key={track}
               onClick={() => handleTrackChange(track)}
               className={`
-                pb-3 md:pb-1 text-base md:text-2xl transition-all duration-300
+                pb-3 md:pb-1 text-base md:text-2xl transition-all duration-100 cursor-pointer
                 ${
                   activeTrack === track
                     ? "text-text-main border-b-2 border-text-main font-bold"
