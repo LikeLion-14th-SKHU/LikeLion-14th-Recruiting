@@ -25,7 +25,7 @@ function AlumniQuotesCarousel({ alumniQuotes }) {
 
   return (
     <div className="relative">
-      <div className="absolute right-4 md:right-8 flex gap-4 z-50">
+      <div className="absolute right-4 md:right-8 flex gap-4 z-30">
         <button
           ref={prevRef}
           className="rounded-full border border-white bg-black/20 p-3 text-white backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
