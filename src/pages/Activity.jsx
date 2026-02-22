@@ -249,22 +249,22 @@ function Activity() {
   return (
     <section className="mx-auto bg-primary-bg px-5 py-12 md:px-30 md:py-18 md:w-360">
       {/* Activity 타이틀 */}
-      <h2 className="w-fit text-[32px] md:text-[64px] font-bold bg-gradient bg-clip-text text-transparent mb-6 md:mb-10">
+      <h2 className="w-fit text-[32px] md:text-6xl font-bold bg-gradient bg-clip-text text-transparent mb-6 md:mb-7">
         Activity
       </h2>
 
       {/* 질문 */}
-      <h3 className="text-xl md:text-4xl font-semibold text-text-main mb-6 md:mb-10">
+      <h3 className="text-xl md:text-4xl font-semibold text-text-main mb-6 md:mb-17">
         멋사에선 무엇을 하나요?
       </h3>
 
       {/* 네비게이션 버튼 - 모바일: 2x2 가운데 정렬 / 데스크탑: 기존 유지 */}
-      <div className="grid grid-cols-2 gap-3 justify-items-center md:flex md:flex-wrap md:gap-26.25 mb-12 md:mb-20">
+      <div className="grid grid-cols-2 gap-3 justify-items-center md:flex md:flex-wrap md:justify-between mb-12 md:mb-13">
         {["파트별 스터디", "아이디어톤", "해커톤", "친목활동"].map((tab) => (
           <button
             key={tab}
             onClick={() => scrollToSection(tab)}
-            className="px-5 md:px-6 md:w-55.25 w-32.5 h-11.75 shadow-primary-glow md:h-24 md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300 cursor-pointer"
+            className="px-5 md:w-50 w-32.5 h-11.75 shadow-primary-glow md:h-22 md:text-2xl py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm font-semibold md:font-bold hover:bg-primary-point2 hover:text-white transition-all duration-300 cursor-pointer"
           >
             {tab}
           </button>
@@ -278,11 +278,11 @@ function Activity() {
       >
         <div className="mb-4 h-0.5 w-20 md:w-24.25 md:mb-7 bg-gradient" />
 
-        <h4 className="text-2xl md:text-4xl font-semibold text-text-main mb-6 md:mb-10">
+        <h4 className="text-2xl md:text-4xl font-semibold text-text-main mb-6 md:mb-5">
           파트별 스터디
         </h4>
 
-        <p className="text-sm md:text-2xl text-text-sub mb-8 md:mb-12">
+        <p className="text-sm md:text-xl text-text-sub mb-8 md:mb-18">
           프론트엔드, 백엔드, AI 파트로 나누어 운영한 주도하여 정기적인 스터디를
           진행합니다.
           <br />
@@ -296,10 +296,10 @@ function Activity() {
               key={track}
               onClick={() => handleTrackChange(track)}
               className={`
-                pb-3 md:pb-1 text-base md:text-2xl font-bold transition-all duration-300
+                pb-3 md:pb-1 text-base md:text-2xl transition-all duration-300
                 ${
                   activeTrack === track
-                    ? "text-text-main border-b-2 border-text-main"
+                    ? "text-text-main border-b-2 border-text-main font-bold"
                     : "text-[#9e9e9e]"
                 }
               `}
@@ -380,23 +380,23 @@ function Activity() {
                       <div
                         className={`${
                           index === 0
-                            ? "mb-10 ml-20 mt-10" // Step1
+                            ? "ml-20 mt-15" // Step1
                             : index === 1
-                            ? "mt-54 " // Step2
-                            : index === 2
-                            ? "mb-10 mt-10" // Step3
-                            : index === 3
-                            ? "mt-54" // Step4
-                            : "mb-10 mt-10" // Step5
+                              ? "mt-56 ml-40 " // Step2
+                              : index === 2
+                                ? "mt-15" // Step3
+                                : index === 3
+                                  ? "mt-56 ml-40" // Step4
+                                  : "mt-15" // Step5
                         } max-w-75 text-start`}
                       >
-                        <p className="text-[30px] font-bold bg-gradient bg-clip-text text-transparent mb">
+                        <p className="w-fit text-3xl font-bold bg-gradient bg-clip-text text-transparent">
                           Step {step.number}
                         </p>
-                        <p className="text-[20px] font-semibold w-112.5 text-text-main">
+                        <p className="text-xl font-semibold w-112.5 text-text-main">
                           {step.title}
                         </p>
-                        <p className="text-[15px] text-text-sub w-87.5 h-25 whitespace-pre-line">
+                        <p className="text-[15px] font-light text-text-sub w-87.5 h-25 whitespace-pre-line leading-tight">
                           {step.subtitle}
                         </p>
                       </div>
@@ -420,7 +420,7 @@ function Activity() {
           <h4 className="text-2xl md:text-4xl font-semibold text-text-main mb-4 md:mb-6">
             {section.title}
           </h4>
-          <p className="text-sm md:text-2xl text-text-sub md:w-210.25 leading-relaxed whitespace-pre-line mb-8 md:mb-12">
+          <p className="text-sm md:text-xl text-text-sub md:w-210.25 whitespace-pre-line mb-8 md:mb-12">
             {section.description}
           </p>
           {/* 이미지 캐러셀 */}
