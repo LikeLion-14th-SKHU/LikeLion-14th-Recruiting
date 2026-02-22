@@ -57,12 +57,12 @@ function About() {
           </h3>
 
           {/* 카드 그리드 - 모바일: 2-1 레이아웃, 웹: 1-1-1 */}
-          <div className="flex flex-wrap justify-center gap-x-[31px] gap-y-5 md:gap-x-[75px] md:gap-y-0 md:flex-nowrap md:justify-start">
+          <div className="flex flex-wrap justify-center gap-x-7.75 gap-y-5 md:gap-x-18.75 md:gap-y-0 md:flex-nowrap md:justify-start">
             {cards.map((card, index) => (
               <div
                 key={index}
                 className={`
-                  w-[146px] h-[76px] md:w-[350px] md:h-[183px]
+                  w-36.5 h-19 md:w-87.5 md:h-45.75
                   rounded-2xl md:rounded-3xl border-2 md:border-[3px] 
                   border-primary-point2 shadow-primary-glow 
                   p-4 md:p-8 text-center flex flex-col items-center justify-center
@@ -72,7 +72,7 @@ function About() {
                 <h4 className="text-[13px]  md:text-[36px] font-bold text-text-main  ">
                   {card.title}
                 </h4>
-                <div className="w-16 mt-0.5 md:mt-0.5 md:mb-4 md:w-[176px]  bg-transparent border-t-1 md:border-t-3 border-primary-point2 shadow-primary-glow mb-2 md:mb-2" />
+                <div className="w-16 mt-0.5 md:mt-0.5  md:w-44 md:mb-4 bg-transparent border-t-1 md:border-t-3 border-primary-point2 shadow-primary-glow mb-2 md:mb-2" />
                 <p className="text-[10px] md:text-[25px] text-text-sub whitespace-pre-line leading-tight ">
                   {card.description}
                 </p>

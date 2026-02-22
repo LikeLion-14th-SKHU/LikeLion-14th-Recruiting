@@ -259,12 +259,12 @@ function Activity() {
       </h3>
 
       {/* 네비게이션 버튼 - 모바일: 2x2 가운데 정렬 / 데스크탑: 기존 유지 */}
-      <div className="grid grid-cols-2 gap-3 justify-items-center md:flex md:flex-wrap md:gap-[105px] mb-12 md:mb-20">
+      <div className="grid grid-cols-2 gap-3 justify-items-center md:flex md:flex-wrap md:gap-26.25 mb-12 md:mb-20">
         {["파트별 스터디", "아이디어톤", "해커톤", "친목활동"].map((tab) => (
           <button
             key={tab}
             onClick={() => scrollToSection(tab)}
-            className="px-5 md:px-6 md:w-[221px] w-[130px] h-[47px] shadow-primary-glow md:h-[96px] md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300 cursor-pointer"
+            className="px-5 md:px-6 md:w-55.25 w-32.5 h-11.75 shadow-primary-glow md:h-24 md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300 cursor-pointer"
           >
             {tab}
           </button>
@@ -276,7 +276,7 @@ function Activity() {
         ref={partStudyRef}
         className="space-y-10 md:space-y-15 mb-20 md:mb-32"
       >
-        <div className="mb-4 h-0.5 w-20 md:w-[97px] md:mb-7 bg-gradient" />
+        <div className="mb-4 h-0.5 w-20 md:w-24.25 md:mb-7 bg-gradient" />
 
         <h4 className="text-2xl md:text-4xl font-semibold text-text-main mb-6 md:mb-10">
           파트별 스터디
@@ -336,7 +336,7 @@ function Activity() {
               {/* 타임라인 - 모바일 */}
               <div className="md:hidden overflow-visible">
                 <div className="pl-2">
-                  <div className="space-y-4 border-l-2 border-primary-point2 pl-[23px]">
+                  <div className="space-y-4 border-l-2 border-primary-point2 pl-57.5">
                     {tracks[activeTrack].steps.map((step) => (
                       <div key={step.number} className="relative">
                         <span className="absolute -left-8 top-2 h-4 w-4 rounded-full border-2 border-primary-point2 bg-primary-bg shadow-primary-glow" />
@@ -367,7 +367,7 @@ function Activity() {
                   className="absolute left-0 right-8 top-1/2 h-0.75 -translate-y-1/2 bg-primary-point2 shadow-primary-glow"
                   style={{ top: "200px" }}
                 />
-                <div className="grid grid-cols-5 max-w-[1100px]">
+                <div className="grid grid-cols-5 max-w-275">
                   {tracks[activeTrack].steps.map((step, index) => (
                     <div
                       key={step.number}
@@ -388,15 +388,15 @@ function Activity() {
                             : index === 3
                             ? "mt-54" // Step4
                             : "mb-10 mt-10" // Step5
-                        } max-w-[300px] text-start`}
+                        } max-w-75 text-start`}
                       >
                         <p className="text-[30px] font-bold bg-gradient bg-clip-text text-transparent mb">
                           Step {step.number}
                         </p>
-                        <p className="text-[20px] font-semibold w-[450px] text-text-main">
+                        <p className="text-[20px] font-semibold w-112.5 text-text-main">
                           {step.title}
                         </p>
-                        <p className="text-[15px] text-text-sub w-[350px] h-[100px] whitespace-pre-line">
+                        <p className="text-[15px] text-text-sub w-87.5 h-25 whitespace-pre-line">
                           {step.subtitle}
                         </p>
                       </div>
@@ -416,11 +416,11 @@ function Activity() {
           ref={section.ref}
           className="space-y-6 md:space-y-10 mb-20 md:mb-32"
         >
-          <div className="mb-4 h-0.5 w-20 md:w-[97px] md:mb-7 bg-gradient" />
+          <div className="mb-4 h-0.5 w-20 md:w-24.25 md:mb-7 bg-gradient" />
           <h4 className="text-2xl md:text-4xl font-semibold text-text-main mb-4 md:mb-6">
             {section.title}
           </h4>
-          <p className="text-sm md:text-2xl text-text-sub md:w-[841px] leading-relaxed whitespace-pre-line mb-8 md:mb-12">
+          <p className="text-sm md:text-2xl text-text-sub md:w-210.25 leading-relaxed whitespace-pre-line mb-8 md:mb-12">
             {section.description}
           </p>
           {/* 이미지 캐러셀 */}
@@ -429,7 +429,7 @@ function Activity() {
               {/* 왼쪽 화살표 */}
               <button
                 onClick={() => handlePrevSlide(section.id)}
-                className="z-30 flex-shrink-0 mr-2.5 cursor-pointer"
+                className="z-30 shrink-0 mr-2.5 cursor-pointer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -455,7 +455,7 @@ function Activity() {
               </button>
 
               {/* 이미지 컨테이너 */}
-              <div className="relative w-[280px] h-[200px] md:w-[600px] md:h-[400px] flex items-center justify-center">
+              <div className="relative w-70 h-50 md:w-150 md:h-100 flex items-center justify-center">
                 {/* 메인 이미지 - Framer Motion 적용 */}
                 <AnimatePresence mode="wait">
                   {section.images.map((img, index) => {
@@ -477,7 +477,7 @@ function Activity() {
                           stiffness: 400,
                           damping: 35,
                         }}
-                        className="w-[280px] h-[200px] md:w-[600px] md:h-[400px] overflow-hidden shadow-[0_0_10px_2px_rgba(255,161,0,0.7)] relative z-20"
+                        className="w-70 h-50 md:w-150 md:h-100 overflow-hidden shadow-[0_0_10px_2px_rgba(255,161,0,0.7)] relative z-20"
                       >
                         <img
                           src={img}
@@ -500,7 +500,7 @@ function Activity() {
                   return (
                     <div
                       key={`prev-${index}`}
-                      className="hidden md:block absolute left-0 w-auto h-[300px] overflow-hidden opacity-40 blur-[3px] z-10"
+                      className="hidden md:block absolute left-0 w-auto h-75 overflow-hidden opacity-40 blur-[3px] z-10"
                       style={{ transform: "translateX(-55%)" }}
                     >
                       <img
@@ -521,7 +521,7 @@ function Activity() {
                   return (
                     <div
                       key={`next-${index}`}
-                      className="hidden md:block absolute right-0 w-auto h-[300px] overflow-hidden opacity-40 blur-[3px] z-10"
+                      className="hidden md:block absolute right-0 w-auto h-75 overflow-hidden opacity-40 blur-[3px] z-10"
                       style={{ transform: "translateX(55%)" }}
                     >
                       <img
@@ -537,7 +537,7 @@ function Activity() {
               {/* 오른쪽 화살표 */}
               <button
                 onClick={() => handleNextSlide(section.id)}
-                className="z-30 flex-shrink-0 ml-2.5"
+                className="z-30 shrink-0 ml-2.5"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
