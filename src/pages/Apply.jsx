@@ -138,26 +138,6 @@ function Apply() {
       </div>
 
       <FaqSection faqSections={faqSections} />
-
-      <article className="pt-30">
-        <div className="mb-3 h-0.5 w-25 bg-gradient" />
-        <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
-          문의 사항
-        </h3>
-        <div className="flex pt-5">
-          <img
-            className="size-8.25 mt-1"
-            src="../img/인스타로고.png"
-            alt="인스타 로고"
-          />
-          <a
-            className="pl-1 text-3xl"
-            href="https://www.instagram.com/likelion_skhu/"
-          >
-            @likelion_skhu
-          </a>
-        </div>
-      </article>
     </section>
   );
 }
