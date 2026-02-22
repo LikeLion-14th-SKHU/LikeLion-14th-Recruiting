@@ -336,7 +336,7 @@ function Activity() {
               {/* 타임라인 - 모바일 */}
               <div className="md:hidden overflow-visible">
                 <div className="pl-2">
-                  <div className="space-y-4 border-l-2 border-primary-point2 pl-[2px]">
+                  <div className="space-y-4 border-l-2 border-primary-point2 pl-[23px]">
                     {tracks[activeTrack].steps.map((step) => (
                       <div key={step.number} className="relative">
                         <span className="absolute -left-8 top-2 h-4 w-4 rounded-full border-2 border-primary-point2 bg-primary-bg shadow-primary-glow" />

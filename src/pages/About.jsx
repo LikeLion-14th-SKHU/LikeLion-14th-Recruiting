@@ -57,7 +57,7 @@ function About() {
           </h3>
 
           {/* 카드 그리드 - 모바일: 2-1 레이아웃, 웹: 1-1-1 */}
-          <div className="flex flex-wrap gap-x-[31px] gap-y-5 md:gap-x-[75px] md:gap-y-0">
+          <div className="flex flex-wrap justify-center gap-x-[31px] gap-y-5 md:gap-x-[75px] md:gap-y-0 md:flex-nowrap md:justify-start">
             {cards.map((card, index) => (
               <div
                 key={index}
@@ -66,7 +66,7 @@ function About() {
                   rounded-2xl md:rounded-3xl border-2 md:border-[3px] 
                   border-primary-point2 shadow-primary-glow 
                   p-4 md:p-8 text-center flex flex-col items-center justify-center
-                  ${index === 2 ? "mx-auto md:mx-0" : ""}
+                 
                 `}
               >
                 <h4 className="text-[13px]  md:text-[36px] font-bold text-text-main  ">
