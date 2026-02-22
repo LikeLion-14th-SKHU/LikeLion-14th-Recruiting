@@ -18,7 +18,7 @@ function HackathonCarousel({ title, projects }) {
 
   return (
     <article className="pt-10 md:pt-15 overflow-hidden">
-      <div className="mb-3 h-0.5 w-25 bg-gradient md:mx-auto mx-0" />
+      <div className="mb-3 h-0.5 w-25 bg-gradient mx-0" />
       <h3 className="text-2xl md:text-4xl font-semibold md:mb-10">{title}</h3>
 
       <div className="relative mx-auto md:h-180 w-full max-w-6xl overflow-hidden flex items-center justify-center">
