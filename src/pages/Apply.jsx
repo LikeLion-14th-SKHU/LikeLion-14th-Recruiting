@@ -96,8 +96,8 @@ function Apply() {
   );
 
   return (
-    <section className="bg-primary-bg pt-18.75 md:mx-30 mx-5  text-text-main md:pt-18.75">
-      <h2 className="w-fit font-bold bg-gradient bg-clip-text text-transparent text-4xl md:text-[64px]">
+    <section className="mx-auto bg-primary-bg px-5 py-12 md:px-30 md:py-18.75 md:w-360">
+      <h2 className="w-fit text-[32px] md:text-6xl font-bold bg-gradient bg-clip-text text-transparent">
         Apply
       </h2>
 
@@ -107,7 +107,7 @@ function Apply() {
           <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
             지원 방식 안내
           </h3>
-          <ul className="mt-5 text-lg md:text-2xl text-text-sub">
+          <ul className="mt-5 text-[14px] md:text-xl leading-relaxed md:font-medium text-text-sub">
             {howToApply.map((point) => (
               <li key={point}>{point}</li>
             ))}
@@ -119,7 +119,7 @@ function Apply() {
           <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
             지원 전에 꼭 읽어주세요
           </h3>
-          <ul className="mt-5 list-disc pl-6 text-lg md:text-2xl text-text-sub">
+          <ul className="mt-5 list-disc pl-6 text-[14px] md:text-xl leading-relaxed md:font-medium text-text-sub">
             {beforeApply.map((point) => (
               <li key={point}>{point}</li>
             ))}
@@ -127,7 +127,7 @@ function Apply() {
         </article>
       </div>
 
-      <div className="pl-10 py-10 md:py-0">
+      <div className="pl-10 py-10 md:py-15 w-fit">
         <ApplySection />
       </div>
 

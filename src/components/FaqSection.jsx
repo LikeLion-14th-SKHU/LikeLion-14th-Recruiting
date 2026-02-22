@@ -37,7 +37,7 @@ function FaqSection({ faqSections }) {
                       className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                       aria-expanded={isOpen}
                     >
-                      <span className="text-base md:text-xl font-semibold text-text-main">
+                      <span className="text-[14px] md:text-xl leading-relaxed md:font-medium text-text-main">
                         Q. {item.q}
                       </span>
 
