@@ -6,13 +6,28 @@ import Activity from "./pages/Activity.jsx";
 import Recruitment from "./pages/Recruitment.jsx";
 import Apply from "./pages/Apply.jsx";
 import Results from "./pages/Results.jsx";
+import Footer from "./components/Footer.jsx";
+
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-primary-bg">
         <Header />
-        <main className="mx-auto w-full max-w-5xl px-6 py-10">
+        <main className="mx-auto w-full max-w-360">
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -23,6 +38,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );
