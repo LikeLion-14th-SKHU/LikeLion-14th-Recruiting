@@ -114,7 +114,7 @@ function Home() {
             className="hidden md:block h-[75px] w-auto object-contain"
           />
           <span
-            className="absolute inset-0 flex md:items-center justify-start md:justify-center md:mb-1  text-base md:text-[30px] pt-2 pl-3.5 md:pl-7"
+            className="absolute inset-0 flex md:items-center justify-start md:justify-center md:mb-1  text-base md:text-[30px] pt-4 pl-3.5 md:pl-7"
             style={{
               background: "linear-gradient(to left, #FF4D00, #FFA100)",
               WebkitBackgroundClip: "text",
