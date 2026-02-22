@@ -85,7 +85,7 @@ function Home() {
         <button
           disabled={!isActive}
           className={`
-            w-[118px] md:w-[289px] h-[42px] md:h-[97px] px-2 md:px-10 py-2 md:py-5 
+            w-29.5 md:w-72.25 h-10.5 md:h-24.25 px-2 md:px-10 py-2 md:py-5 
             rounded-xl text-white text-[15px] md:text-[30px] font-bold 
             transition-all duration-300
             ${
@@ -104,14 +104,14 @@ function Home() {
           <img
             src="../img/홈모바일말풍선.png"
             alt="말풍선"
-            className="block md:hidden h-[45px] w-auto object-contain"
+            className="block md:hidden h-11.25 w-auto object-contain"
           />
 
           {/* 웹용 (홈말풍선.png) */}
           <img
             src="../img/홈말풍선.png"
             alt="말풍선"
-            className="hidden md:block h-[75px] w-auto object-contain"
+            className="hidden md:block h-18.75 w-auto object-contain"
           />
           <span
             className="absolute inset-0 flex md:items-center justify-start md:justify-center md:mb-3  text-base md:text-[30px] pt-4 pl-3.5 md:pl-7"

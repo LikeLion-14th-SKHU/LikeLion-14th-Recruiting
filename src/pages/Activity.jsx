@@ -429,13 +429,29 @@ function Activity() {
               {/* 왼쪽 화살표 */}
               <button
                 onClick={() => handlePrevSlide(section.id)}
-                className="z-30 flex-shrink-0 mr-2.5"
+                className="z-30 flex-shrink-0 mr-2.5 cursor-pointer"
               >
-                <img
-                  src="../img/모바일왼쪽화살표.png"
-                  alt="이전"
-                  className="w-6 h-6 md:w-10 md:h-10"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle
+                    cx="11"
+                    cy="11"
+                    r="10"
+                    stroke="#FFA100"
+                    strokeWidth="1"
+                  />
+                  <polyline
+                    points="12.5 7 8.5 11 12.5 15"
+                    stroke="#FFA100"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
 
               {/* 이미지 컨테이너 */}
@@ -523,17 +539,33 @@ function Activity() {
                 onClick={() => handleNextSlide(section.id)}
                 className="z-30 flex-shrink-0 ml-2.5"
               >
-                <img
-                  src="../img/모바일오른쪽화살표.png"
-                  alt="다음"
-                  className="w-6 h-6 md:w-10 md:h-10"
-                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle
+                    cx="13"
+                    cy="13"
+                    r="10"
+                    stroke="#FFA100"
+                    strokeWidth="1"
+                  />
+                  <polyline
+                    points="11.5 9 15.5 13 11.5 17"
+                    stroke="#FFA100"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
             </div>
           )}
         </div>
       ))}
-      <div className="w-[178px] md:w-[379px] h-auto">
+      <div className="w-44.5 md:w-94.75 h-auto">
         <p className="text-text-main md:text-[24px] text-[12px] md:mb-1">
           이 활동들이 실제로 어떻게 이어졌는지 우리가 만들어온 결과를
           확인해보세요
