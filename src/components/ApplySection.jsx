@@ -55,7 +55,7 @@ function ApplySection() {
       )}M-${pad(timeLeft.seconds)}S`;
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 md:gap-5 md:mb-31 md:mt-15">
+    <div className="flex flex-col md:flex-row gap-4 md:gap-5">
       {/* 지원하기 버튼 */}
       <button
         disabled={!isActive}
