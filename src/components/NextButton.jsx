@@ -10,7 +10,9 @@ export default function NextButton({ children, onClick, to }) {
         onClick={onClick ? onClick : () => navigate(to)}
         className="w-full rounded-lg text-[12px] bg-primary-bg py-2 md:text-[24px] font-semibold text-primary-point2 transition duration-600 hover:bg-gradient hover:text-primary-bg"
       >
-        {children}
+        <div className="w-fit mx-auto bg-gradient bg-clip-text text-transparent">
+          {children}
+        </div>
       </button>
     </div>
   );
