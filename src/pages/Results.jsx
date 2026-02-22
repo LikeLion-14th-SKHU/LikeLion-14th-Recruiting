@@ -147,7 +147,7 @@ function Results() {
           "많은 사람들과 협업하며 개발 경험을 쌓을 수 있는 소중한 기회였습니다. 아기사자로서도, 운영진으로서도 배울 점이 많았던 동아리예요!",
         generation: "12기",
         position: "Frontend",
-        name: "박X은", // 박예은
+        name: "박예은",
       },
       {
         id: "alumni-2",
@@ -155,14 +155,14 @@ function Results() {
           "전공 수업에도 도움이 되어 좋았고, 선배들이랑 친해질 수 있었어요!",
         generation: "13기",
         position: "Frontend",
-        name: "김X안", // 김지안
+        name: "김지안",
       },
       {
         id: "alumni-3",
         content: "체계적인 커리큘럼 덕분에 많은 것을 배울 수 있었습니다",
         generation: "13기",
         position: "Frontend",
-        name: "최X혁", // 최성혁
+        name: "최성혁",
       },
       {
         id: "alumni-4",
@@ -170,7 +170,7 @@ function Results() {
           "혼자였다면 막막했을 프론트엔드 공부를 스터디와 프로젝트로 하니까 차근차근 성장할 수 있었어요!",
         generation: "13기",
         position: "Frontend",
-        name: "현X빈", // 현정빈
+        name: "현정빈",
       },
       {
         id: "alumni-5",
@@ -178,14 +178,14 @@ function Results() {
           "막막했던 저에게 멋사는 방향을 잡아 주었습니다. 체계적인 학습과 다양한 경험 덕분에 한 단계 성장했습니다. 모두 도전해보세요 화이팅입니다! 💪",
         generation: "12기",
         position: "Backend",
-        name: "조X림", // 조규림
+        name: "조규림",
       },
       {
         id: "alumni-6",
         content: "힘들더라도 포기하지 않으면 좋은 경험이 남을 거예요.",
         generation: "13기",
         position: "Backend",
-        name: "김X정", // 김수정
+        name: "김수정",
       },
       {
         id: "alumni-7",
@@ -193,7 +193,7 @@ function Results() {
           "운영진의 코드 리뷰를 통해 제 코드를 더 깊이 생각해볼 수 있었고 이를 통해 많이 배웠습니다. 여러분도 피드백을 두려워하지 마세요!",
         generation: "13기",
         position: "Backend",
-        name: "김X헌", // 김태헌
+        name: "김태헌",
       },
       {
         id: "alumni-8",
@@ -201,7 +201,7 @@ function Results() {
           "서비스를 처음부터 끝까지 온전히 만드는 경험이 좋았어요. 그 과정에서 오류를 선후배들과 함께 고치며 같이 성장할 수 있었어요.",
         generation: "13기",
         position: "AI",
-        name: "조X수", // 조성수
+        name: "조성수",
       },
       {
         id: "alumni-9",
@@ -209,7 +209,7 @@ function Results() {
           "멋사를 하면서 다양한 사람들을 만나 좋은 경험을 쌓았고, 개발 실력도 확실히 늘어서 가는 것 같아요",
         generation: "13기",
         position: "AI",
-        name: "김X빈", // 김규빈
+        name: "김규빈",
       },
     ];
 
