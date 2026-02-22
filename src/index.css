@@ -1,15 +1,5 @@
 @import "tailwindcss";
-
-@theme {
-  --color-primary-point1: #ff3d00;
-  --color-primary-point2: #ffa100;
-  --color-primary-bg: #171717;
-  --color-text-main: #f3f3f3;
-  --color-text-sub: #d7d7d7;
-
-  --background-image-gradient: linear-gradient(to left, #ff4d00, #ffa100);
-  --shadow-primary-glow: 0px 0px 5px 0px #ff4d00;
-}
+@config "../tailwind.config.js";
 
 * {
   font-family:
