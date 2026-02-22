@@ -74,7 +74,7 @@ function ApplySection() {
       </button>
 
       {/* 말풍선 이미지 + 카운트다운 텍스트 오버레이 */}
-      <div className="relative flex justify-start w-full md:w-auto md:justify-start md:items-center">
+      <div className="relative flex justify-start w-fit md:w-auto md:justify-start md:items-center">
         {/* 모바일용 (홈모바일말풍선.png) */}
         <img
           src="../img/홈모바일말풍선.png"
@@ -89,7 +89,7 @@ function ApplySection() {
           className="hidden md:block h-18.75 w-auto object-contain"
         />
         <span
-          className="absolute inset-0 flex md:items-center justify-start md:justify-center md:mb-3  text-base md:text-[30px] pt-4 pl-3.5 md:pl-7"
+          className="absolute inset-0 flex md:items-center justify-start md:justify-center md:mb-3  text-base md:text-[30px] pt-3.75 pl-3 md:pl-7"
           style={{
             background: "linear-gradient(to left, #FF4D00, #FFA100)",
             WebkitBackgroundClip: "text",

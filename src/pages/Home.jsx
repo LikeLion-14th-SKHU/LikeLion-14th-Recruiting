@@ -25,7 +25,7 @@ function Home() {
         배움이 경험이 되는 동아리입니다.
       </p>
 
-      <div>
+      <div className="w-fit">
         <ApplySection />
       </div>
     </section>
