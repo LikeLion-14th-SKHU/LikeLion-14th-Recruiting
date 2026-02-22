@@ -1,3 +1,5 @@
+import NextButton from "../components/NextButton";
+
 function About() {
   const cards = [
     {
@@ -86,11 +88,7 @@ function About() {
             <br />
             조금 더 자세히 살펴볼 수 있습니다
           </p>
-          <button className="border-bg-gradient px-5 md:px-0 py-2.5 md:py-0 flex justify-center items-center h-[42px] md:h-[54px] md:w-[208px] rounded-lg md:rounded-xl border-2 border-primary-point2 bg-primary-bg text-[14px] md:text-xl font-bold ">
-            <span className="bg-gradient bg-clip-text text-transparent md:text-[24px]">
-              활동 내용 보기
-            </span>
-          </button>
+          <NextButton to={"/activity"}>활동 내용 보기</NextButton>
         </article>
       </div>
     </section>

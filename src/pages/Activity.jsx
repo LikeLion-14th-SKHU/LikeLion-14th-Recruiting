@@ -1,12 +1,29 @@
 import { useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import NextButton from "../components/NextButton";
 
 function Activity() {
   const [activeTrack, setActiveTrack] = useState("Frontend");
+  const [direction, setDirection] = useState(1); // 1: 오른쪽→왼쪽, -1: 왼쪽→오른쪽
   const [currentSlide, setCurrentSlide] = useState({
     아이디어톤: 0,
     해커톤: 0,
     친목활동: 0,
   });
+  const [slideDirection, setSlideDirection] = useState({
+    아이디어톤: 1,
+    해커톤: 1,
+    친목활동: 1,
+  });
+
+  const trackOrder = ["Frontend", "Backend", "AI"];
+
+  const handleTrackChange = (track) => {
+    const prevIndex = trackOrder.indexOf(activeTrack);
+    const nextIndex = trackOrder.indexOf(track);
+    setDirection(nextIndex > prevIndex ? 1 : -1);
+    setActiveTrack(track);
+  };
 
   // 섹션 ref
   const partStudyRef = useRef(null);
@@ -153,7 +170,7 @@ function Activity() {
         "../img/아이디어톤2.png",
         "../img/아이디어톤3.png",
         "../img/아이디어톤4.png",
-      ], // 사용자가 src 추가
+      ],
     },
     {
       id: "해커톤",
@@ -186,6 +203,7 @@ function Activity() {
   ];
 
   const handlePrevSlide = (section) => {
+    setSlideDirection((prev) => ({ ...prev, [section]: -1 })); // ← 추가
     setCurrentSlide((prev) => {
       const sectionData = carouselSections.find((s) => s.id === section);
       return {
@@ -199,6 +217,7 @@ function Activity() {
   };
 
   const handleNextSlide = (section) => {
+    setSlideDirection((prev) => ({ ...prev, [section]: 1 })); // ← 추가
     setCurrentSlide((prev) => {
       const sectionData = carouselSections.find((s) => s.id === section);
       return {
@@ -209,6 +228,22 @@ function Activity() {
             : prev[section] + 1,
       };
     });
+  };
+
+  // Framer Motion 슬라이드 variants
+  const slideVariants = {
+    enter: (dir) => ({
+      x: dir > 0 ? 60 : -60,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (dir) => ({
+      x: dir > 0 ? -60 : 60,
+      opacity: 0,
+    }),
   };
 
   return (
@@ -223,13 +258,13 @@ function Activity() {
         멋사에선 무엇을 하나요?
       </h3>
 
-      {/* 네비게이션 버튼 */}
-      <div className="flex flex-wrap gap-3 md:gap-[105px] mb-12 md:mb-20">
+      {/* 네비게이션 버튼 - 모바일: 2x2 가운데 정렬 / 데스크탑: 기존 유지 */}
+      <div className="grid grid-cols-2 gap-3 justify-items-center md:flex md:flex-wrap md:gap-[105px] mb-12 md:mb-20">
         {["파트별 스터디", "아이디어톤", "해커톤", "친목활동"].map((tab) => (
           <button
             key={tab}
             onClick={() => scrollToSection(tab)}
-            className="px-5 md:px-6 md:w-[221px] md:ml-0 ml-7 mr-[-27px] w-[130px] h-[47px] shadow-primary-glow md:h-[96px] md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm  font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300"
+            className="px-5 md:px-6 md:w-[221px] w-[130px] h-[47px] shadow-primary-glow md:h-[96px] md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300"
           >
             {tab}
           </button>
@@ -259,77 +294,118 @@ function Activity() {
           {["Frontend", "Backend", "AI"].map((track) => (
             <button
               key={track}
-              onClick={() => setActiveTrack(track)}
+              onClick={() => handleTrackChange(track)}
               className={`
-        pb-3 md:pb-1 text-base md:text-2xl font-bold transition-all duration-300
-        ${
-          activeTrack === track
-            ? "text-text-main border-b-2 border-text-main"
-            : "text-[#9e9e9e]"
-        }
-      `}
+                pb-3 md:pb-1 text-base md:text-2xl font-bold transition-all duration-300
+                ${
+                  activeTrack === track
+                    ? "text-text-main border-b-2 border-text-main"
+                    : "text-[#9e9e9e]"
+                }
+              `}
             >
               {track}
             </button>
           ))}
         </div>
 
-        {/* 트랙별 컨텐츠 */}
-        <div>
-          <div className="md:px-5">
-            <h5 className="text-lg md:text-3xl font-bold text-text-main mb-4 md:mb-6">
-              {tracks[activeTrack].title}
-            </h5>
-            <p className="text-sm md:text-xl  text-text-sub  whitespace-pre-line mb-10 md:mb-16">
-              {tracks[activeTrack].description}
-            </p>
-          </div>
-          {/* 타임라인 - 모바일 */}
-          <div className="md:hidden">
-            <div className="space-y-8 border-l-2 border-primary-point2 pl-8">
-              {tracks[activeTrack].steps.map((step) => (
-                <div key={step.number} className="relative">
-                  <span className="absolute -left-10.5 top-2 h-4 w-4 rounded-full border-2 border-primary-point2 bg-primary-bg shadow-primary-glow" />
-                  <p className="text-lg font-bold text-primary-point2 mb-2">
-                    Step {step.number}
-                  </p>
-                  <p className="text-base font-semibold text-text-main mb-2">
-                    {step.title}
-                  </p>
-                  <p className="text-sm text-text-sub leading-relaxed whitespace-pre-line">
-                    {step.subtitle}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+        {/* 트랙별 컨텐츠 - AnimatePresence로 부드러운 전환 */}
+        <div className="overflow-hidden">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={activeTrack}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 400, damping: 35 },
+                opacity: { duration: 0.2 },
+              }}
+            >
+              <div className="md:px-5">
+                <h5 className="text-lg md:text-3xl font-bold text-text-main mb-4 md:mb-6">
+                  {tracks[activeTrack].title}
+                </h5>
+                <p className="text-sm md:text-xl text-text-sub whitespace-pre-line mb-10 md:mb-16">
+                  {tracks[activeTrack].description}
+                </p>
+              </div>
 
-          {/* 타임라인 - 웹 */}
-          <div className="relative mt-14 hidden md:block">
-            <div className="absolute left-0 right-0 top-1/2 h-0.75 -translate-y-1/2 bg-primary-point2 shadow-primary-glow" />
-            <div className="grid grid-cols-5">
-              {tracks[activeTrack].steps.map((step, index) => (
-                <div key={step.number} className="relative flex justify-center">
-                  <span className=" absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border-2 border-primary-point2 bg-primary-bg shadow-primary-glow z-10" />
-                  <div
-                    className={`${
-                      index % 2 === 0 ? "mb-10" : "mt-54"
-                    } max-w-[200px] text-start`}
-                  >
-                    <p className="text-[30px] font-bold bg-gradient bg-clip-text text-transparent mb">
-                      Step {step.number}
-                    </p>
-                    <p className="text-[20px] font-semibold text-text-main ">
-                      {step.title}
-                    </p>
-                    <p className="text-[15px] text-text-sub w-[319px] h-[100px] whitespace-pre-line">
-                      {step.subtitle}
-                    </p>
+              {/* 타임라인 - 모바일 */}
+              <div className="md:hidden overflow-visible">
+                <div className="pl-2">
+                  <div className="space-y-4 border-l-2 border-primary-point2 pl-[2px]">
+                    {tracks[activeTrack].steps.map((step) => (
+                      <div key={step.number} className="relative">
+                        <span className="absolute -left-8 top-2 h-4 w-4 rounded-full border-2 border-primary-point2 bg-primary-bg shadow-primary-glow" />
+                        <p
+                          className="text-lg font-bold bg-gradient bg-clip-text text-transparent"
+                          style={{
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                          }}
+                        >
+                          Step {step.number}
+                        </p>
+                        <p className="text-base font-semibold text-text-main">
+                          {step.title}
+                        </p>
+                        <p className="text-sm text-text-sub leading-relaxed whitespace-pre-line">
+                          {step.subtitle}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+
+              {/* 타임라인 - 웹 */}
+              <div className="relative mt-14 hidden md:block">
+                <div
+                  className="absolute left-0 right-8 top-1/2 h-0.75 -translate-y-1/2 bg-primary-point2 shadow-primary-glow"
+                  style={{ top: "200px" }}
+                />
+                <div className="grid grid-cols-5 max-w-[1100px]">
+                  {tracks[activeTrack].steps.map((step, index) => (
+                    <div
+                      key={step.number}
+                      className="relative flex justify-center"
+                    >
+                      <span
+                        className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full border-2 border-primary-point2 bg-primary-bg shadow-primary-glow z-10"
+                        style={{ top: "200px" }}
+                      />
+                      <div
+                        className={`${
+                          index === 0
+                            ? "mb-10 ml-20 mt-10" // Step1
+                            : index === 1
+                            ? "mt-54 " // Step2
+                            : index === 2
+                            ? "mb-10 mt-10" // Step3
+                            : index === 3
+                            ? "mt-54" // Step4
+                            : "mb-10 mt-10" // Step5
+                        } max-w-[300px] text-start`}
+                      >
+                        <p className="text-[30px] font-bold bg-gradient bg-clip-text text-transparent mb">
+                          Step {step.number}
+                        </p>
+                        <p className="text-[20px] font-semibold w-[450px] text-text-main">
+                          {step.title}
+                        </p>
+                        <p className="text-[15px] text-text-sub w-[350px] h-[100px] whitespace-pre-line">
+                          {step.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 
@@ -351,7 +427,6 @@ function Activity() {
           {section.images.length > 0 && (
             <div className="relative flex items-center justify-center">
               {/* 왼쪽 화살표 */}
-
               <button
                 onClick={() => handlePrevSlide(section.id)}
                 className="z-30 flex-shrink-0 mr-2.5"
@@ -365,24 +440,27 @@ function Activity() {
 
               {/* 이미지 컨테이너 */}
               <div className="relative w-[280px] h-[200px] md:w-[600px] md:h-[400px] flex items-center justify-center">
-                {section.images.map((img, index) => {
-                  const currentIndex = currentSlide[section.id];
-                  const isCurrent = index === currentIndex;
-                  const isPrev =
-                    index ===
-                    (currentIndex - 1 + section.images.length) %
-                      section.images.length;
-                  const isNext =
-                    index === (currentIndex + 1) % section.images.length;
-                  const isVisible = isCurrent || isPrev || isNext;
-
-                  if (!isVisible) return null;
-
-                  // 현재 이미지
-                  if (isCurrent) {
+                {/* 메인 이미지 - Framer Motion 적용 */}
+                <AnimatePresence mode="wait">
+                  {section.images.map((img, index) => {
+                    if (index !== currentSlide[section.id]) return null;
                     return (
-                      <div
+                      <motion.div
                         key={index}
+                        initial={{
+                          opacity: 0,
+                          x: slideDirection[section.id] * 60,
+                        }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{
+                          opacity: 0,
+                          x: slideDirection[section.id] * -60,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 35,
+                        }}
                         className="w-[280px] h-[200px] md:w-[600px] md:h-[400px] overflow-hidden shadow-[0_0_10px_2px_rgba(255,161,0,0.7)] relative z-20"
                       >
                         <img
@@ -390,49 +468,53 @@ function Activity() {
                           alt={`${section.title} ${index + 1}`}
                           className="w-full h-full object-cover"
                         />
-                      </div>
+                      </motion.div>
                     );
-                  }
+                  })}
+                </AnimatePresence>
 
-                  // 왼쪽 이미지 (현재 이미지의 왼쪽에 배치, 오른쪽 20%가 가려짐)
-                  if (isPrev) {
-                    return (
-                      <div
-                        key={index}
-                        className="hidden md:block absolute left-0 w-auto h-[300px] overflow-hidden opacity-40 blur-[3px] z-10"
-                        style={{
-                          transform: "translateX(-55%)",
-                        }}
-                      >
-                        <img
-                          src={img}
-                          alt={`${section.title} ${index + 1}`}
-                          className="h-full w-auto object-cover"
-                        />
-                      </div>
-                    );
-                  }
+                {/* 왼쪽 흐린 이미지 - 데스크탑만 (기존 그대로) */}
+                {section.images.map((img, index) => {
+                  const currentIndex = currentSlide[section.id];
+                  const isPrev =
+                    index ===
+                    (currentIndex - 1 + section.images.length) %
+                      section.images.length;
+                  if (!isPrev) return null;
+                  return (
+                    <div
+                      key={`prev-${index}`}
+                      className="hidden md:block absolute left-0 w-auto h-[300px] overflow-hidden opacity-40 blur-[3px] z-10"
+                      style={{ transform: "translateX(-55%)" }}
+                    >
+                      <img
+                        src={img}
+                        alt={`${section.title} ${index + 1}`}
+                        className="h-full w-auto object-cover"
+                      />
+                    </div>
+                  );
+                })}
 
-                  // 오른쪽 이미지 (현재 이미지의 오른쪽에 배치, 왼쪽 20%가 가려짐)
-                  if (isNext) {
-                    return (
-                      <div
-                        key={index}
-                        className="hidden md:block absolute right-0 w-auto h-[300px] overflow-hidden opacity-40 blur-[3px] z-10"
-                        style={{
-                          transform: "translateX(55%)",
-                        }}
-                      >
-                        <img
-                          src={img}
-                          alt={`${section.title} ${index + 1}`}
-                          className="h-full w-auto object-cover"
-                        />
-                      </div>
-                    );
-                  }
-
-                  return null;
+                {/* 오른쪽 흐린 이미지 - 데스크탑만 (기존 그대로) */}
+                {section.images.map((img, index) => {
+                  const currentIndex = currentSlide[section.id];
+                  const isNext =
+                    index === (currentIndex + 1) % section.images.length;
+                  if (!isNext) return null;
+                  return (
+                    <div
+                      key={`next-${index}`}
+                      className="hidden md:block absolute right-0 w-auto h-[300px] overflow-hidden opacity-40 blur-[3px] z-10"
+                      style={{ transform: "translateX(55%)" }}
+                    >
+                      <img
+                        src={img}
+                        alt={`${section.title} ${index + 1}`}
+                        className="h-full w-auto object-cover"
+                      />
+                    </div>
+                  );
                 })}
               </div>
 
@@ -451,6 +533,7 @@ function Activity() {
           )}
         </div>
       ))}
+      <NextButton to={"/results"}>활동 결과 보기</NextButton>
     </section>
   );
 }
