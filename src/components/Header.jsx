@@ -62,7 +62,7 @@ function Header() {
     <>
       {/* 데스크탑 헤더 */}
       <header className="sticky top-0 z-100 w-full mx-auto border-b border-[#323232] bg-primary-bg/50 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-360 items-center justify-between md:px-30 px-4.5 py-5">
+        <div className="mx-auto flex max-w-360 items-center justify-between md:px-30 px-4.5 py-3">
           <NavLink to="/" className="flex items-center gap-3">
             <img
               className="size-10"
@@ -124,7 +124,7 @@ function Header() {
           {/* 모바일 햄버거 */}
           <button
             className="md:hidden flex flex-col gap-1.5"
-            onClick={() => setIsOpen(true)}
+            onClick={() => setIsOpen((prev) => !prev)}
             aria-label="Open Menu"
           >
             <span className="h-0.5 w-6 rounded-xl bg-text-main" />
