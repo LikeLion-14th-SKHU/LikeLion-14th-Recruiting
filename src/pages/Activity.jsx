@@ -264,7 +264,7 @@ function Activity() {
           <button
             key={tab}
             onClick={() => scrollToSection(tab)}
-            className="px-5 md:px-6 md:w-[221px] w-[130px] h-[47px] shadow-primary-glow md:h-[96px] md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300"
+            className="px-5 md:px-6 md:w-[221px] w-[130px] h-[47px] shadow-primary-glow md:h-[96px] md:text-[30px] py-2.5 rounded-[14px] md:py-3 md:rounded-[28px] md:border-3 border-2 border-primary-point2 bg-transparent text-text-main text-sm font-semibold hover:bg-primary-point2 hover:text-white transition-all duration-300 cursor-pointer"
           >
             {tab}
           </button>
