@@ -9,7 +9,7 @@ function FaqSection({ faqSections }) {
   };
 
   return (
-    <article className="pt-30">
+    <article>
       <div className="mb-3 h-0.5 w-25 bg-gradient" />
       <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
         자주 묻는 질문 (FAQ)

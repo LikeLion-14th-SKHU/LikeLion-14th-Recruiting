@@ -133,7 +133,9 @@ function Apply() {
         </article>
       </div>
 
-      <ApplySection />
+      <div className="pl-10 py-10 md:py-0">
+        <ApplySection />
+      </div>
 
       <FaqSection faqSections={faqSections} />
 
