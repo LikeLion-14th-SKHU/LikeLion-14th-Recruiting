@@ -25,11 +25,11 @@ function HackathonCarousel({ title, projects }) {
         {/* 왼쪽 화살표 */}
         <button
           ref={prevRef}
-          className="absolute left-0 top-15 md:left-90 md:top-80 md:-translate-y-1/2 z-30 flex-shrink-0 mr-2.5 cursor-pointer"
+          className="absolute left-2 top-76 md:left-90 md:top-80 md:-translate-y-1/2 z-30 shrink-0 mr-2.5 cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
+            className="w-10 h-10 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
             viewBox="0 0 24 24"
             fill="none"
           >
@@ -47,11 +47,11 @@ function HackathonCarousel({ title, projects }) {
         {/* 오른쪽 화살표 */}
         <button
           ref={nextRef}
-          className="absolute right-0 top-15 md:right-90 md:top-80 md:-translate-y-1/2 z-30 flex-shrink-0 ml-2.5 cursor-pointer"
+          className="absolute right-2 top-76 md:top-80 md:right-90 md:-translate-y-1/2 z-30 shrink-0 ml-2.5 cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
+            className="w-10 h-10 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
             viewBox="0 0 24 24"
             fill="none"
           >
@@ -103,7 +103,7 @@ function HackathonCarousel({ title, projects }) {
                 <div className="flex h-160 items-center justify-center">
                   <div
                     className={[
-                      "flex items-center justify-center origin-center transition-all duration-500 will-change-transform",
+                      "flex itxems-center justify-center origin-center transition-all duration-500 will-change-transform",
                       isActive
                         ? "z-30 scale-100 opacity-100"
                         : "z-10 scale-75 opacity-80",
@@ -128,7 +128,7 @@ function HackathonCarousel({ title, projects }) {
                         <img
                           src={p.imgSrc}
                           alt={p.title}
-                          className="h-full w-full object-contain object-center"
+                          className="h-full w-full object-contain object-center rounded-4xl"
                         />
                       )}
                     </div>

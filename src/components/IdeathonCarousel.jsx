@@ -33,7 +33,7 @@ function IdeathonCarousel({ title, projects }) {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
+              className="w-10 h-10 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
               viewBox="0 0 24 24"
               fill="none"
             >
@@ -55,7 +55,7 @@ function IdeathonCarousel({ title, projects }) {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
+              className="w-10 h-10 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
               viewBox="0 0 24 24"
               fill="none"
             >
