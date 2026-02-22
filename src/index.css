@@ -1,20 +1,8 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-* {
-  font-family:
-    "Pretendard Variable",
-    Pretendard,
-    -apple-system,
-    BlinkMacSystemFont,
-    system-ui,
-    Roboto,
-    "Helvetica Neue",
-    "Segoe UI",
-    "Apple SD Gothic Neo",
-    "Noto Sans KR",
-    "Malgun Gothic",
-    sans-serif;
+html {
+  font-family: theme(fontFamily.sans);
 }
 
 body {

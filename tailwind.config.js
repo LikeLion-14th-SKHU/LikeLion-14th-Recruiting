@@ -3,6 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          "Pretendard Variable",
+          "Pretendard",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
+      },
       backgroundImage: {
         gradient: "linear-gradient(to left, #FF4D00, #FFA100)",
       },
