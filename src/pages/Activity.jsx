@@ -247,7 +247,7 @@ function Activity() {
   };
 
   return (
-    <section className="mx-auto bg-primary-bg px-5 py-12 md:px-30 md:py-18.75 md:w-360">
+    <section className="mx-auto bg-primary-bg px-5 py-12 md:px-30 md:py-18 md:w-360">
       {/* Activity 타이틀 */}
       <h2 className="w-fit text-[32px] md:text-[64px] font-bold bg-gradient bg-clip-text text-transparent mb-6 md:mb-10">
         Activity
@@ -533,7 +533,15 @@ function Activity() {
           )}
         </div>
       ))}
-      <NextButton to={"/results"}>활동 결과 보기</NextButton>
+      <div className="w-[178px] md:w-[379px] h-auto">
+        <p className="text-text-main md:text-[24px] text-[12px] md:mb-1">
+          이 활동들이 실제로 어떻게 이어졌는지 우리가 만들어온 결과를
+          확인해보세요
+        </p>
+      </div>
+      <NextButton className=" w-26 md:w-52" to={"/results"}>
+        활동 결과 보기
+      </NextButton>
     </section>
   );
 }

@@ -126,7 +126,7 @@ function Recruitment() {
       </article>
 
       <article className="mt-27.5 pb-7.5">
-        <p className="text-2xl text-text-main">
+        <p className="text-2xl text-text-main md:text-[24px] text-[12px] md:mb-1">
           위 내용을 확인하셨다면
           <br />
           지원서를 작성해 주세요

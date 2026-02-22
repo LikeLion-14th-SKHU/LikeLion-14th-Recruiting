@@ -242,7 +242,7 @@ function Results() {
       </article>
 
       <article className="mt-15 pb-7.5">
-        <p className="text-xl font-medium md:text-2xl text-text-main">
+        <p className="text-text-main md:text-[24px] text-[12px] md:mb-1">
           이 기록을
           <br />
           다음 이야기로 이어갈 분들을 찾고 있습니다
