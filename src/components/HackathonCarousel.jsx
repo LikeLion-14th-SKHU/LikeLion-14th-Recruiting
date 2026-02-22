@@ -139,13 +139,13 @@ function HackathonCarousel({ title, projects }) {
       </div>
 
       <div className="md:w-156.25 mx-auto text-center">
-        <h4 className="text-4xl font-semibold tracking-tight text-text-main md:text-[48px]">
+        <h4 className="text-4xl font-semibold tracking-tight text-text-main md:text-4xl">
           {current.title}
         </h4>
-        <p className="mt-3 text-xl text-text-sub md:text-[32px]">
+        <p className="mt-3 text-xl text-text-sub md:text-3xl font-normal whitespace-pre-line">
           {current.subtitle}
         </p>
-        <p className="mt-2 text-base text-text-sub/50 md:text-[24px]">
+        <p className="mt-2 text-base text-text-sub/50 font-normal md:text-2xl">
           {current.members}
         </p>
       </div>

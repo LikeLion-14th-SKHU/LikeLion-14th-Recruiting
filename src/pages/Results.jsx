@@ -21,14 +21,14 @@ function Results() {
         imgSrc: "../img/SpeechFit.png",
         title: "SpeechFit",
         subtitle:
-          "면접·발표 전, 말하기 실력을 빠르게 단련해주는 AI 말하기 트레이너",
+          "면접·발표 전, 말하기 실력을 빠르게 단련해주는 \nAI 말하기 트레이너",
         members: "이다정, 이민준, 장대영, 조규림, 최성혁, 홍효정",
       },
       {
         id: "idea-2",
         imgSrc: "../img/동행.png",
         title: "동행",
-        subtitle: "반려동물이 걱정되는 순간 당신의 판단을 도와주는 도구",
+        subtitle: "반려동물이 걱정되는 순간 \n당신의 판단을 도와주는 도구",
         members: "김수정, 서연진, 유하영, 박성준, 양라윤, 이하늘",
       },
       {
@@ -36,7 +36,7 @@ function Results() {
         imgSrc: "../img/두리번.png",
         title: "두리번",
         subtitle:
-          "현 위치 기반으로 주변 공공 편의 시설을 실시간 안내하는 AI 위치 기반 안내 서비스",
+          "현 위치 기반으로 주변 공공 편의 시설을 \n실시간 안내하는 AI 위치 기반 안내 서비스",
         members: "강미소, 김지안, 박동준, 백하윤, 전승빈, 정다운",
       },
       {
@@ -44,7 +44,7 @@ function Results() {
         imgSrc: "../img/코스쓱.png",
         title: "코스쓱",
         subtitle:
-          "사용자가 가고자 하는 위치와 그 날의 무드를 입력하면 AI가 맞춤 코스를 구성해 주는 AI 기반 코스 추천 서비스",
+          "사용자가 가고자 하는 위치와 그 날의 무드를 입력하면 AI가 맞춤 코스를 구성해 주는 AI 기반 \n코스 추천 서비스",
         members: "박예은, 이가은, 이예은, 이한용, 조성수, 최진원",
       },
       {
@@ -59,7 +59,7 @@ function Results() {
         imgSrc: "../img/DeepGuard.png",
         title: "Deep Guard",
         subtitle:
-          "딥페이크 이미지·영상 탐지와 예방 기능을 통해 개인을 디지털 범죄로부터 보호하는 통합 보안 서비스",
+          "딥페이크 이미지·영상 탐지와 예방 기능을 통해 \n개인을 디지털 범죄로부터 보호하는 통합 보안 서비스",
         members: "김규빈, 박세은, 손솔하, 이정혁, 박종범, 이창현",
       },
       {
@@ -67,7 +67,7 @@ function Results() {
         imgSrc: "../img/AiDo.png",
         title: "AiDo",
         subtitle:
-          "대학교 과제와 사용자의 특성을 분석해 일정을 관리해주는 AI 서비스",
+          "대학교 과제와 사용자의 특성을 분석해 \n일정을 관리해주는 AI 서비스",
         members: "권하연, 김태현, 윤현승, 이슬아, 이아림, 홍다보미",
       },
     ];
@@ -97,7 +97,7 @@ function Results() {
         imgSrc: "../img/어디가게.png",
         title: "어디가게?",
         subtitle:
-          "서울 소상공인 지역·업종 종합 분석 리포트(최적의 입지, 지원정책 추천) AI 서비스",
+          "서울 소상공인 지역·업종 \n종합 분석 리포트(최적의 입지, 지원정책 추천) \nAI 서비스",
         members: "박세은, 박동준, 이정혁, 현정빈, 이창현",
         frame: "phone",
       },
@@ -106,7 +106,7 @@ function Results() {
         imgSrc: "../img/ARTIPIC.png",
         title: "ARTIPIC",
         subtitle:
-          "위치/날씨 기반, AI추천으로 지금 즐길 수 있는 문화 콘텐츠를 한눈에 보여줌",
+          "위치/날씨 기반, AI추천으로 \n지금 즐길 수 있는 문화 콘텐츠를 한눈에 보여줌",
         members: "최진원, 백하윤, 김태헌, 박종범, 손솔하, 이하늘",
         frame: "phone",
       },
@@ -114,7 +114,7 @@ function Results() {
         id: "hack-5",
         imgSrc: "../img/청상회.png",
         title: "청상회 : 청년과 상인의 회",
-        subtitle: "지역 대학생/청년과 소상공인의 니즈에 맞춰 AI로 매칭",
+        subtitle: "지역 대학생/청년과 소상공인의 니즈에 맞춰 \nAI로 매칭",
         members: "정다운, 최기웅, 이한용, 홍다보미, 이가은, 박성준",
         frame: "desktop",
       },
@@ -123,7 +123,7 @@ function Results() {
         imgSrc: "../img/동네링.png",
         title: "동네링",
         subtitle:
-          "지역별 맞춤 소식을 AI로 큐레이션해주는, 나만을 위한 로컬 뉴스 요약 플랫폼",
+          "지역별 맞춤 소식을 AI로 큐레이션해주는, \n나만을 위한 로컬 뉴스 요약 플랫폼",
         members: "유하영, 김현민, 김지안, 김은혜, 서연진, 장대영",
         frame: "phone",
       },
@@ -217,8 +217,8 @@ function Results() {
   }, []);
 
   return (
-    <section className="bg-primary-bg pt-5.5 md:mx-30 mx-5 text-text-main md:pt-18.75">
-      <h2 className="w-fit font-bold bg-gradient bg-clip-text text-transparent text-4xl md:text-[64px]">
+    <section className="mx-auto bg-primary-bg px-5 py-12 md:px-30 md:py-18.75 md:w-360">
+      <h2 className="w-fit text-[32px] md:text-6xl font-bold bg-gradient bg-clip-text text-transparent">
         Results
       </h2>
 
@@ -232,7 +232,7 @@ function Results() {
 
       <article className="pt-20 md:pt-30">
         <div className="mb-3 h-0.5 w-25 bg-gradient" />
-        <h3 className="text-3xl md:text-5xl font-semibold text-text-main">
+        <h3 className="text-3xl md:text-4xl font-semibold text-text-main">
           선배들의 한 마디
         </h3>
 

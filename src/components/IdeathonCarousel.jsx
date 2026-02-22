@@ -16,9 +16,9 @@ function IdeathonCarousel({ title, projects }) {
   const current = projects[Math.min(activeIndex, projects.length - 1)];
 
   return (
-    <article className="md:pt-15">
-      <div className="mb-3 h-0.5 w-25 bg-gradient" />
-      <h3 className="text-2xl md:text-5xl font-semibold text-text-main">
+    <article>
+      <div className="mb-3 h-0.5 w-23 bg-gradient" />
+      <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
         {title}
       </h3>
 
@@ -138,13 +138,13 @@ function IdeathonCarousel({ title, projects }) {
         </div>
 
         <div className="w-74 md:w-156.25 mx-auto pt-5 md:pt-22.5">
-          <h4 className="text-3xl md:text-4xl font-semibold tracking-tight text-text-main md:text-[48px]">
+          <h4 className="text-3xl md:text-4xl font-semibold tracking-tight text-text-main">
             {current.title}
           </h4>
-          <p className="mt-3 text-lg md:text-xl text-text-sub md:text-[32px]">
+          <p className="mt-3 text-lg md:text-3xl md:font-light text-text-sub md:whitespace-pre-line">
             {current.subtitle}
           </p>
-          <p className="mt-2 text-sm md:text-base text-text-sub/50 md:text-[24px]">
+          <p className="mt-2 text-sm md:text-xl font-light text-text-sub/50 ">
             {current.members}
           </p>
         </div>
