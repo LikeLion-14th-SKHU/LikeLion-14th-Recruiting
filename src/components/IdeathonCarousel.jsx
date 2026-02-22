@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react";
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,7 +27,7 @@ function IdeathonCarousel({ title, projects }) {
           {/* 왼쪽 화살표 */}
           <button
             ref={prevRef}
-            className="absolute left-0 top-15 md:left-50 md:top-1/2 md:-translate-y-1/2 z-30 flex-shrink-0 mr-2.5 cursor-pointer"
+            className="absolute left-0 top-15 md:left-50 md:top-1/2 md:-translate-y-1/2 z-30 shrink-0 mr-2.5 cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +49,7 @@ function IdeathonCarousel({ title, projects }) {
           {/* 오른쪽 화살표 */}
           <button
             ref={nextRef}
-            className="absolute right-0 top-15 md:right-50 md:top-1/2 md:-translate-y-1/2 z-30 flex-shrink-0 ml-2.5 cursor-pointer"
+            className="absolute right-0 top-15 md:right-50 md:top-1/2 md:-translate-y-1/2 z-30 shrink-0 ml-2.5 cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

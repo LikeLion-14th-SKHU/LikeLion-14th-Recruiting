@@ -74,7 +74,7 @@ function ApplySection() {
       </button>
 
       {/* 말풍선 이미지 + 카운트다운 텍스트 오버레이 */}
-      <div className="relative flex justify-start w-full md:w-auto justify-center md:justify-start md:items-center">
+      <div className="relative flex justify-start w-full md:w-auto md:justify-start md:items-center">
         {/* 모바일용 (홈모바일말풍선.png) */}
         <img
           src="../img/홈모바일말풍선.png"

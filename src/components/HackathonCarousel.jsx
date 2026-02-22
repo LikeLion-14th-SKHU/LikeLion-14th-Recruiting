@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react";
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";

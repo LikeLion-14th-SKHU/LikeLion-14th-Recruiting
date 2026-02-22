@@ -15,8 +15,6 @@ function Apply() {
     "완벽하지 않아도 솔직하게 작성해주세요.",
   ];
 
-  // 아직 완성되지 않은 FAQ!
-
   const faqSections = useMemo(
     () => [
       {

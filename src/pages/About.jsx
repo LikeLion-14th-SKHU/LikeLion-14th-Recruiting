@@ -72,7 +72,7 @@ function About() {
                 <h4 className="text-[13px]  md:text-[36px] font-bold text-text-main  ">
                   {card.title}
                 </h4>
-                <div className="w-16 mt-0.5 md:mt-0.5  md:w-44 md:mb-4 bg-transparent border-t-1 md:border-t-3 border-primary-point2 shadow-primary-glow mb-2 md:mb-2" />
+                <div className="w-16 mt-0.5 md:mt-0.5  md:w-44 md:mb-4 bg-transparent border-t md:border-t-3 border-primary-point2 shadow-primary-glow mb-2" />
                 <p className="text-[10px] md:text-[25px] text-text-sub whitespace-pre-line leading-tight ">
                   {card.description}
                 </p>
