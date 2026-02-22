@@ -55,39 +55,51 @@ function ApplySection() {
       )}M-${pad(timeLeft.seconds)}S`;
 
   return (
-    <div className="pt-22 pl-13 flex flex-col md:flex-row md:items-center gap-5">
+    <div className="flex flex-col md:flex-row gap-4 md:gap-5 md:mb-31 md:mt-15">
+      {/* 지원하기 버튼 */}
       <button
         disabled={!isActive}
         className={`
-          px-10 py-5 rounded-xl text-white text-2xl font-extrabold transition-all duration-300
-          ${
-            isActive
-              ? "bg-gradient cursor-pointer hover:opacity-90 hover:scale-[1.02] shadow-primary-glow"
-              : "bg-gray-600 cursor-not-allowed opacity-50"
-          }
-        `}
+            w-29.5 md:w-72.25 h-10.5 md:h-24.25 px-2 md:px-10 py-2 md:py-5 
+            rounded-xl text-white text-[15px] md:text-[30px] font-bold 
+            transition-all duration-300
+            ${
+              isActive
+                ? "bg-gradient cursor-pointer hover:opacity-90 hover:scale-[1.02] shadow-primary-glow"
+                : "bg-gray-600 cursor-not-allowed opacity-50"
+            }
+          `}
       >
         14기 지원하기
       </button>
 
-      <div className="relative flex items-center">
-        <div
-          className="w-0 h-0"
-          style={{
-            borderTop: "12px solid transparent",
-            borderBottom: "12px solid transparent",
-            borderRight: "16px solid #FFA100",
-          }}
+      {/* 말풍선 이미지 + 카운트다운 텍스트 오버레이 */}
+      <div className="relative flex justify-start w-full md:w-auto justify-center md:justify-start md:items-center">
+        {/* 모바일용 (홈모바일말풍선.png) */}
+        <img
+          src="../img/홈모바일말풍선.png"
+          alt="말풍선"
+          className="block md:hidden h-11.25 w-auto object-contain"
         />
-        <div
-          className="px-8 py-5 rounded-xl border-2 text-xl font-bold"
+
+        {/* 웹용 (홈말풍선.png) */}
+        <img
+          src="../img/홈말풍선.png"
+          alt="말풍선"
+          className="hidden md:block h-18.75 w-auto object-contain"
+        />
+        <span
+          className="absolute inset-0 flex md:items-center justify-start md:justify-center md:mb-3  text-base md:text-[30px] pt-4 pl-3.5 md:pl-7"
           style={{
-            borderImage: "linear-gradient(to left, #FF4D00, #FFA100) 1",
-            color: "#FFA100",
+            background: "linear-gradient(to left, #FF4D00, #FFA100)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+            fontVariantNumeric: "tabular-nums",
           }}
         >
           {countdownText}
-        </div>
+        </span>
       </div>
     </div>
   );
