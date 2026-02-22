@@ -174,7 +174,7 @@ function Header() {
           </NavLink>
         </nav>
 
-        <div className="pt-37">
+        <div className="pt-25">
           <div className="text-center">
             <div className="text-primary-point2 font-bold text-lg">Credits</div>
             <div className="pt-1.5">윤현승 이정혁 이다정</div>
