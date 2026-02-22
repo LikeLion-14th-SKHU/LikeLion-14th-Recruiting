@@ -57,7 +57,7 @@ function Recruitment() {
           <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
             이런 경우는 어려울 수 있어요
           </h3>
-          <ul className="mt-5 list-disc pl-6 ttext-[14px] md:text-xl leading-relaxed md:font-medium text-text-sub">
+          <ul className="mt-5 list-disc pl-6 text-[14px] md:text-xl leading-relaxed md:font-medium text-text-sub">
             {difficultPoints.map((point) => (
               <li key={point}>{point}</li>
             ))}
