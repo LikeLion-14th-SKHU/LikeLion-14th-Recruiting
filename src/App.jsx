@@ -8,12 +8,26 @@ import Apply from "./pages/Apply.jsx";
 import Results from "./pages/Results.jsx";
 import Footer from "./components/Footer.jsx";
 
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-primary-bg">
         <Header />
-        <main className="mx-auto w-full max-w-[1440px]">
+        <main className="mx-auto w-full max-w-360">
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
