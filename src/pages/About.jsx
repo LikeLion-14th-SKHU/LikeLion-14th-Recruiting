@@ -19,7 +19,7 @@ function About() {
   return (
     <section className="mx-auto bg-primary-bg px-5 py-12 md:px-30 md:py-18.75 md:w-360">
       {/* About 타이틀 */}
-      <h2 className="w-fit text-[32px] md:text-[64px] font-bold bg-gradient bg-clip-text text-transparent mb-8 md:mb-15">
+      <h2 className="w-fit text-[32px] md:text-6xl font-bold bg-gradient bg-clip-text text-transparent mb-8 md:mb-15">
         About
       </h2>
 
@@ -28,10 +28,10 @@ function About() {
         {/* 첫 번째 질문 */}
         <article>
           <div className="mb-3.5 h-0.75 w-20 md:w-24.25 bg-gradient" />
-          <h3 className="text-[22px] md:text-[48px] font-semibold text-text-main mb-4 md:mb-6">
+          <h3 className="text-[22px] md:text-4xl font-semibold text-text-main mb-4 md:mb-6">
             멋쟁이 사자처럼?
           </h3>
-          <p className="text-[14px] md:text-2xl text-text-sub leading-relaxed md:mb-25">
+          <p className="text-[14px] md:text-xl font-medium text-text-sub leading-8.75 md:mb-25">
             멋쟁이 사자처럼은 자신이 생각했던 아이디어를 구체화하고 프로그래밍
             교육을 통해 <br /> 웹 서비스 구현을 목표로 활동하는 동아리입니다.
           </p>
@@ -40,19 +40,19 @@ function About() {
         {/* 두 번째 질문 */}
         <article>
           <div className="mb-3.5 h-0.75 w-20 md:w-24.25 bg-gradient" />
-          <h3 className="text-[22px] md:text-[48px] font-semibold text-text-main mb-4 md:mb-6">
+          <h3 className="text-[22px] md:text-4xl font-semibold text-text-main mb-4 md:mb-6">
             어떤 사람들이 모여있나요?
           </h3>
-          <p className="text-[14px] md:text-2xl text-text-sub leading-relaxed md:mb-25">
+          <p className="text-[14px] md:text-xl font-medium text-text-sub leading-8.75 md:mb-25">
             전공도, 실력도, 출발선도 전부 다르지만 같이 배우고 같이 만들어보고
-            싶은 사람들이 모인 동아리입니다.
+            싶은 <br /> 사람들이 모인 동아리입니다.
           </p>
         </article>
 
         {/* 세 번째 질문 */}
         <article>
           <div className="mb-3.5 h-0.75 w-20 md:w-24.25 bg-gradient" />
-          <h3 className="text-[22px] md:text-[48px] font-semibold text-text-main mb-8 md:mb-10">
+          <h3 className="text-[22px] md:text-4xl font-semibold text-text-main mb-8 md:mb-10">
             멋사가 중요하게 생각하는 것
           </h3>
 
@@ -69,11 +69,11 @@ function About() {
                  
                 `}
               >
-                <h4 className="text-[13px]  md:text-[36px] font-bold text-text-main  ">
+                <h4 className="text-[13px]  md:text-[32px] font-bold text-text-main">
                   {card.title}
                 </h4>
                 <div className="w-16 mt-0.5 md:mt-0.5  md:w-44 md:mb-4 bg-transparent border-t md:border-t-3 border-primary-point2 shadow-primary-glow mb-2" />
-                <p className="text-[10px] md:text-[25px] text-text-sub whitespace-pre-line leading-tight ">
+                <p className="text-[10px] md:text-2xl text-text-sub whitespace-pre-line leading-tight ">
                   {card.description}
                 </p>
               </div>
