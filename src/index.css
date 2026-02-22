@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
+@tailwind utilities;
+@import "tailwindcss/preflight";
 
 * {
   font-family: "Pretendard Variable", Pretendard, -apple-system,
