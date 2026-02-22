@@ -34,8 +34,8 @@ function Recruitment() {
   ];
 
   return (
-    <section className="bg-primary-bg pt-5.5 md:mx-30 mx-5  text-text-main md:pt-18.75">
-      <h2 className="w-fit font-bold bg-gradient bg-clip-text text-transparent text-4xl md:text-[64px]">
+    <section className="mx-auto bg-primary-bg px-5 py-12 md:px-30 md:py-18.75 md:w-360">
+      <h2 className="w-fit text-[32px] md:text-6xl font-bold bg-gradient bg-clip-text text-transparent">
         Recruitment
       </h2>
 
@@ -45,7 +45,7 @@ function Recruitment() {
           <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
             이런 분을 환영합니다
           </h3>
-          <ul className="mt-5 list-disc pl-6 text-lg md:text-2xl text-text-sub">
+          <ul className="mt-5 list-disc pl-6 text-[14px] md:text-xl leading-relaxed md:font-medium text-text-sub">
             {welcomePoints.map((point) => (
               <li key={point}>{point}</li>
             ))}
@@ -57,7 +57,7 @@ function Recruitment() {
           <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
             이런 경우는 어려울 수 있어요
           </h3>
-          <ul className="mt-5 list-disc pl-6 text-lg md:text-2xl text-text-sub">
+          <ul className="mt-5 list-disc pl-6 ttext-[14px] md:text-xl leading-relaxed md:font-medium text-text-sub">
             {difficultPoints.map((point) => (
               <li key={point}>{point}</li>
             ))}
@@ -67,7 +67,7 @@ function Recruitment() {
 
       <div className=" mt-13 pt-15 grid md:grid-cols-2 gap-6.25 md:gap-0">
         <article className="md:w-[70%] w-[80%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
-          <h4 className="pt-6.25 text-center text-2xl md:text-3xl font-semibold text-text-main">
+          <h4 className="pt-6.25 text-center text-2xl md:text-[32px] font-semibold text-text-main">
             모집 대상
           </h4>
           <div className="mx-auto mt-3 h-0.5 w-44 rounded-3xl bg-primary-point2 shadow-primary-glow" />
@@ -78,12 +78,12 @@ function Recruitment() {
           </ul>
         </article>
         <article className="md:w-[70%] w-[80%] mx-auto rounded-3xl shadow-primary-glow border-[3px] border-primary-point2">
-          <h4 className="pt-6.25 text-center text-2xl md:text-3xl font-semibold text-text-main">
+          <h4 className="pt-6.25 text-center text-2xl md:text-[32px] font-semibold text-text-main">
             활동 조건
           </h4>
           <div className="mx-auto mt-3 h-0.5 w-44 rounded-3xl bg-primary-point2 shadow-primary-glow" />
           <ul className="mt-6 mb-6 w-fit mx-auto list-disc pl-6 text-xl md:text-2xl text-text-sub">
-            <li>매주 2회 정기 세션 필참</li>
+            <li className="pb-4 pt-2">매주 2회 정기 세션 필참</li>
             <li>아이디어톤, 해커톤 활동 필참</li>
           </ul>
         </article>
@@ -95,7 +95,8 @@ function Recruitment() {
           모집 일정
         </h3>
 
-        <div className="mt-8 md:hidden">
+        {/* 모바일 */}
+        <div className="mt-8 md:hidden pl-10">
           <div className="space-y-6 border-l-2 border-primary-point2 pl-8">
             {timeline.map((item) => (
               <div key={item.title} className="relative">
@@ -109,6 +110,7 @@ function Recruitment() {
           </div>
         </div>
 
+        {/* 웹 */}
         <div className="relative mt-14 hidden md:block">
           <div className="absolute left-0 right-0 top-1/2 h-0.75 -translate-y-1/2 bg-[#ff9800]" />
           <div className="grid grid-cols-4">
