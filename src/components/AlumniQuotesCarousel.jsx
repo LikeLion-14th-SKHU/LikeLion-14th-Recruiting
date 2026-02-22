@@ -67,17 +67,17 @@ function AlumniQuotesCarousel({ alumniQuotes }) {
         className="pt-5"
       >
         {alumniQuotes.map((alumniQuote) => (
-          <SwiperSlide key={alumniQuote.id} className="h-auto pt-15">
-            <div className="border-3 border-primary-point2 shadow-primary-glow rounded-4xl p-8 bg-primary-bg backdrop-blur-[20px] h-full min-h-70 flex flex-col">
-              <div className="flex-1 flex items-center justify-center text-center leading-9">
-                <p className="text-xl md:text-xl text-text-sub leading-relaxed">
+          <SwiperSlide key={alumniQuote.id} className="pt-15">
+            <div className="md:w-full w-[70%] mx-auto border-3 border-primary-point2 shadow-primary-glow rounded-4xl p-4 md:p-8 bg-primary-bg min-h-50 md:h-full md:min-h-70 flex flex-col">
+              <div className="flex-1 flex items-center justify-center text-center">
+                <p className="text-[14px] md:text-xl text-text-main leading-relaxed">
                   {alumniQuote.content}
                 </p>
               </div>
 
               <div className="mt-auto">
                 <div className="mb-3 h-0.5 w-full bg-primary-point2" />
-                <p className="text-center text-text-sub">
+                <p className="text-[14px] md:text-xl text-center text-text-sub">
                   {alumniQuote.generation} {alumniQuote.position}{" "}
                   {alumniQuote.name}
                 </p>
