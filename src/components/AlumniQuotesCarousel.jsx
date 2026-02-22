@@ -55,7 +55,7 @@ function AlumniQuotesCarousel({ alumniQuotes }) {
             slidesPerView: 1,
             spaceBetween: 16,
           },
-          1024: {
+          768: {
             slidesPerView: 3,
             spaceBetween: 20,
           },
