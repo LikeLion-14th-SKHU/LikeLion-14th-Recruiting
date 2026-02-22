@@ -31,9 +31,12 @@ function About() {
           <h3 className="text-[22px] md:text-4xl font-semibold text-text-main mb-4 md:mb-6">
             멋쟁이 사자처럼?
           </h3>
-          <p className="text-[14px] md:text-xl font-medium text-text-sub leading-8.75 md:mb-25">
-            멋쟁이 사자처럼은 자신이 생각했던 아이디어를 구체화하고 프로그래밍
-            교육을 통해 <br /> 웹 서비스 구현을 목표로 활동하는 동아리입니다.
+          <p className="text-[14px] md:text-xl font-medium text-text-sub leading-relaxed md:leading-8.75 md:mb-25">
+            멋쟁이 사자처럼은 자신이 생각했던 아이디어를 구체화하고
+            <br className="md:hidden" />
+            프로그래밍 교육을 통해 <br className="hidden md:flex" /> 웹 서비스
+            구현을 목표로 <br className="md:hidden" />
+            활동하는 동아리입니다.
           </p>
         </article>
 
@@ -43,9 +46,10 @@ function About() {
           <h3 className="text-[22px] md:text-4xl font-semibold text-text-main mb-4 md:mb-6">
             어떤 사람들이 모여있나요?
           </h3>
-          <p className="text-[14px] md:text-xl font-medium text-text-sub leading-8.75 md:mb-25">
-            전공도, 실력도, 출발선도 전부 다르지만 같이 배우고 같이 만들어보고
-            싶은 <br /> 사람들이 모인 동아리입니다.
+          <p className="text-[14px] md:text-xl font-medium text-text-sub leading-relaxed md:leading-8.75 md:mb-25">
+            전공도, 실력도, 출발선도 전부 다르지만 <br className="md:hidden" />
+            같이 배우고 같이 만들어보고 싶은 <br className="hidden md:flex" />{" "}
+            사람들이 모인 동아리입니다.
           </p>
         </article>
 
@@ -69,7 +73,7 @@ function About() {
                  
                 `}
               >
-                <h4 className="text-[13px]  md:text-[32px] font-bold text-text-main">
+                <h4 className="text-[13px] md:text-[32px] font-bold text-text-main">
                   {card.title}
                 </h4>
                 <div className="w-16 mt-0.5 md:mt-0.5  md:w-44 md:mb-4 bg-transparent border-t md:border-t-3 border-primary-point2 shadow-primary-glow mb-2" />
