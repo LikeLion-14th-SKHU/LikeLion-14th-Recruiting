@@ -26,7 +26,7 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-primary-bg">
         <Header />
-        <main className="mx-auto w-full max-w-360">
+        <main className="mx-auto w-full max-w-[1440px]">
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
