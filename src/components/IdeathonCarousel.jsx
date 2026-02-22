@@ -26,18 +26,48 @@ function IdeathonCarousel({ title, projects }) {
 
       <div className="relative pt-3 md:mt-10">
         <div className="relative mx-auto md:h-100 px-2.5 overflow-visible">
+          {/* 왼쪽 화살표 */}
           <button
             ref={prevRef}
-            className="absolute left-0 top-15 md:left-45 md:top-1/2 z-30 md:-translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
+            className="absolute left-0 top-15 md:left-50 md:top-1/2 md:-translate-y-1/2 z-30 flex-shrink-0 mr-2.5 cursor-pointer"
           >
-            <FaChevronLeft className="size-3 md:size-7" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <circle cx="11" cy="11" r="10" stroke="#FFA100" strokeWidth="1" />
+              <polyline
+                points="12.5 7 8.5 11 12.5 15"
+                stroke="#FFA100"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
 
+          {/* 오른쪽 화살표 */}
           <button
             ref={nextRef}
-            className="absolute right-0 top-15 md:right-45 md:top-1/2 z-30 md:-translate-y-1/2 rounded-full border border-primary-point1 bg-black/20 p-3 text-primary-point1 shadow-[0_0_10px_rgba(255,77,0)] backdrop-blur-[20px] transition hover:bg-primary-bg cursor-pointer"
+            className="absolute right-0 top-15 md:right-50 md:top-1/2 md:-translate-y-1/2 z-30 flex-shrink-0 ml-2.5 cursor-pointer"
           >
-            <FaChevronRight className="size-3 md:size-7" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 md:w-10 md:h-10 drop-shadow-[0_0_5px_#FF4D00]"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <circle cx="13" cy="13" r="10" stroke="#FFA100" strokeWidth="1" />
+              <polyline
+                points="11.5 9 15.5 13 11.5 17"
+                stroke="#FFA100"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
 
           <Swiper
