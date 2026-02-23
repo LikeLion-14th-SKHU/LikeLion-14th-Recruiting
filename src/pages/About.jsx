@@ -29,10 +29,10 @@ function About() {
         <article>
           <div className="mb-3.5 h-0.75 w-20 md:w-24.25 bg-gradient" />
           <h3 className="text-[22px] md:text-4xl font-semibold text-text-main mb-4 md:mb-6">
-            멋쟁이 사자처럼?
+            멋쟁이사자처럼?
           </h3>
           <p className="text-[14px] md:text-xl font-medium text-text-sub leading-relaxed md:leading-8.75 md:mb-25">
-            멋쟁이 사자처럼은 자신이 생각했던 아이디어를 구체화하고
+            멋쟁이사자처럼은 자신이 생각했던 아이디어를 구체화하고
             <br className="md:hidden" />
             프로그래밍 교육을 통해 <br className="hidden md:flex" /> 웹 서비스
             구현을 목표로 <br className="md:hidden" />
