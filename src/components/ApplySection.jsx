@@ -58,7 +58,16 @@ function ApplySection() {
     <div className="flex flex-col md:flex-row gap-4 md:gap-5">
       {/* 지원하기 버튼 */}
       <button
+        type="button"
         disabled={!isActive}
+        onClick={() => {
+          if (!isActive) return;
+          window.open(
+            "https://docs.google.com/forms/d/e/1FAIpQLSfxOmCdR5cs9qzUYlMWA0d-XhaDlDpl53ak4GkFcFi4ZBm7RQ/viewform",
+            "_blank",
+            "noopener,noreferrer",
+          );
+        }}
         className={`
             w-29.5 md:w-72.25 h-10.5 md:h-24.25 px-2 md:px-10 py-2 md:py-5 
             rounded-xl text-white text-[15px] md:text-[30px] font-bold 
