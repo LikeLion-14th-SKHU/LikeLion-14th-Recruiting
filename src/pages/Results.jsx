@@ -18,7 +18,7 @@ function Results() {
     const allIdeatonProjects = [
       {
         id: "idea-1",
-        imgSrc: "../img/SpeechFit.png",
+        imgSrc: "/img/SpeechFit.png",
         title: "SpeechFit",
         subtitle:
           "면접·발표 전, 말하기 실력을 빠르게 단련해주는 \nAI 말하기 트레이너",
@@ -26,14 +26,14 @@ function Results() {
       },
       {
         id: "idea-2",
-        imgSrc: "../img/동행.png",
+        imgSrc: "/img/동행.png",
         title: "동행",
         subtitle: "반려동물이 걱정되는 순간 \n당신의 판단을 도와주는 도구",
         members: "김수정, 서연진, 유하영, 박성준, 양라윤, 이하늘",
       },
       {
         id: "idea-3",
-        imgSrc: "../img/두리번.png",
+        imgSrc: "/img/두리번.png",
         title: "두리번",
         subtitle:
           "현 위치 기반으로 주변 공공 편의 시설을 \n실시간 안내하는 AI 위치 기반 안내 서비스",
@@ -41,7 +41,7 @@ function Results() {
       },
       {
         id: "idea-4",
-        imgSrc: "../img/코스쓱.png",
+        imgSrc: "/img/코스쓱.png",
         title: "코스쓱",
         subtitle:
           "사용자가 가고자 하는 위치와 그 날의 무드를 입력하면 AI가 맞춤 코스를 구성해 주는 AI 기반 \n코스 추천 서비스",
@@ -49,14 +49,14 @@ function Results() {
       },
       {
         id: "idea-5",
-        imgSrc: "../img/약지기.png",
+        imgSrc: "/img/약지기.png",
         title: "약지기",
         subtitle: "사진 한 장으로 쉽게 알아보는 약 정보 서비스",
         members: "김민우, 김재훈, 김현민, 신수연, 안준영, 현정빈",
       },
       {
         id: "idea-6",
-        imgSrc: "../img/DeepGuard.png",
+        imgSrc: "/img/DeepGuard.png",
         title: "Deep Guard",
         subtitle:
           "딥페이크 이미지·영상 탐지와 예방 기능을 통해 \n개인을 디지털 범죄로부터 보호하는 통합 보안 서비스",
@@ -64,7 +64,7 @@ function Results() {
       },
       {
         id: "idea-7",
-        imgSrc: "../img/AiDo.png",
+        imgSrc: "/img/AiDo.png",
         title: "AiDo",
         subtitle:
           "대학교 과제와 사용자의 특성을 분석해 \n일정을 관리해주는 AI 서비스",
@@ -78,7 +78,7 @@ function Results() {
     const allHackathonProjects = [
       {
         id: "hack-1",
-        imgSrc: "../img/EVENTORY.png",
+        imgSrc: "/img/EVENTORY.png",
         title: "EVENTORY",
         subtitle: "AI가 도와주는 행사 기획 및 홍보",
         members: "강미소, 김수정, 이아림, 이예은, 박예은",
@@ -86,7 +86,7 @@ function Results() {
       },
       {
         id: "hack-2",
-        imgSrc: "../img/NEEZY.png",
+        imgSrc: "/img/NEEZY.png",
         title: "NEEZY",
         subtitle: "AI가 자동으로 '이 동네에 부족한 업종'을 제안 및 추천",
         members: "안준영, 김민우, 윤현승, 최성혁, 이민준",
@@ -94,7 +94,7 @@ function Results() {
       },
       {
         id: "hack-3",
-        imgSrc: "../img/어디가게.png",
+        imgSrc: "/img/어디가게.png",
         title: "어디가게?",
         subtitle:
           "서울 소상공인 지역·업종 \n종합 분석 리포트(최적의 입지, 지원정책 추천) \nAI 서비스",
@@ -103,7 +103,7 @@ function Results() {
       },
       {
         id: "hack-4",
-        imgSrc: "../img/ARTIPIC.png",
+        imgSrc: "/img/ARTIPIC.png",
         title: "ARTIPIC",
         subtitle:
           "위치/날씨 기반, AI추천으로 \n지금 즐길 수 있는 문화 콘텐츠를 한눈에 보여줌",
@@ -112,7 +112,7 @@ function Results() {
       },
       {
         id: "hack-5",
-        imgSrc: "../img/청상회.png",
+        imgSrc: "/img/청상회.png",
         title: "청상회 : 청년과 상인의 회",
         subtitle: "지역 대학생/청년과 소상공인의 니즈에 맞춰 \nAI로 매칭",
         members: "정다운, 최기웅, 이한용, 홍다보미, 이가은, 박성준",
@@ -120,7 +120,7 @@ function Results() {
       },
       {
         id: "hack-6",
-        imgSrc: "../img/동네링.png",
+        imgSrc: "/img/동네링.png",
         title: "동네링",
         subtitle:
           "지역별 맞춤 소식을 AI로 큐레이션해주는, \n나만을 위한 로컬 뉴스 요약 플랫폼",
@@ -129,7 +129,7 @@ function Results() {
       },
       {
         id: "hack-7",
-        imgSrc: "../img/이음.png",
+        imgSrc: "/img/이음.png",
         title: "이음",
         subtitle: "지역 기반 자원과 커뮤니티를 연결하는 플랫폼",
         members: "조정수, 이슬아, 조규림, 양라윤, 이다정",

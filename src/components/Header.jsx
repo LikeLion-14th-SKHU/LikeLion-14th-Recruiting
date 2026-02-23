@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { preloadImages } from "../utils/preloadImages";
 
 const navItems = [
   { to: "/about", label: "About" },
@@ -8,6 +9,29 @@ const navItems = [
   { to: "/results", label: "Results" },
   { to: "/recruitment", label: "Recruitment" },
 ];
+
+const preloadMap = {
+  "/activity": [
+    "/img/아이디어톤1.png",
+    "/img/아이디어톤2.png",
+    "/img/아이디어톤4.png",
+    "/img/해커톤1.png",
+    "/img/해커톤2.png",
+    "/img/해커톤5.png",
+    "/img/친목1.png",
+    "/img/친목2.png",
+    "/img/친목5.png",
+  ],
+  "/results": [
+    "/img/AiDo.png",
+    "/img/약지기.png",
+    "/img/SpeechFit.png",
+    "/img/두리번.png",
+    "/img/코스쓱.png",
+    "/img/DeepGuard.png",
+    "/img/동행.png",
+  ],
+};
 
 function Header() {
   const [hoveredTo, setHoveredTo] = useState(null);
@@ -66,7 +90,7 @@ function Header() {
           <NavLink to="/" className="flex items-center gap-3">
             <img
               className="size-10"
-              src="../img/헤더멋사로고.png"
+              src="/img/헤더멋사로고.png"
               alt="멋사 로고"
             />
             <h1 className="md:text-2xl text-lg font-semibold tracking-tight text-text-main">
@@ -84,7 +108,10 @@ function Header() {
                 key={to}
                 to={to}
                 end={end}
-                onMouseEnter={() => setHoveredTo(to)}
+                onMouseEnter={() => {
+                  setHoveredTo(to);
+                  preloadImages(preloadMap[to] ?? []);
+                }}
                 ref={(el) => {
                   if (el) linkRefs.current[to] = el;
                 }}
@@ -184,18 +211,18 @@ function Header() {
             Contact
           </div>
           <div className="flex justify-center">
-            <img src="../img/푸터인스타로고.png" alt="인스타로고" />
+            <img src="/img/푸터인스타로고.png" alt="인스타로고" />
             <a href="">@likelion_skhu</a>
           </div>
           <div className="flex justify-center">
-            <img src="../img/푸터깃허브로고.png" alt="깃허브로고" />
+            <img src="/img/푸터깃허브로고.png" alt="깃허브로고" />
             <a href="">@LikeLion-14th-SKHU</a>
           </div>
         </div>
         <div className="flex justify-center pt-17">
           <img
             className="size-15"
-            src="../img/헤더멋사로고.png"
+            src="/img/헤더멋사로고.png"
             alt="멋사로고"
           />
         </div>

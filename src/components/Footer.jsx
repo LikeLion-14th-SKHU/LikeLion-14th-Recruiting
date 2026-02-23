@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <img
-              src="../img/푸터인스타로고.png"
+              src="/img/푸터인스타로고.png"
               alt="Instagram"
               className="w-6 h-6"
             />
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-3">
             <img
-              src="../img/푸터깃허브로고.png"
+              src="/img/푸터깃허브로고.png"
               alt="GitHub"
               className="w-6 h-6"
             />
@@ -38,7 +38,7 @@ const Footer = () => {
 
       {/* Logo Section */}
       <div className="md:mr-9">
-        <img src="../img/푸터멋사로고.png" alt="Logo" className="w-auto h-24" />
+        <img src="/img/푸터멋사로고.png" alt="Logo" className="w-auto h-24" />
       </div>
 
       {/* Credits Section */}

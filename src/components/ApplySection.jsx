@@ -86,14 +86,14 @@ function ApplySection() {
       <div className="relative flex justify-start w-fit md:w-auto md:justify-start md:items-center">
         {/* 모바일용 (홈모바일말풍선.png) */}
         <img
-          src="../img/홈모바일말풍선.png"
+          src="/img/홈모바일말풍선.png"
           alt="말풍선"
           className="block md:hidden h-11.25 w-auto object-contain"
         />
 
         {/* 웹용 (홈말풍선.png) */}
         <img
-          src="../img/홈말풍선.png"
+          src="/img/홈말풍선.png"
           alt="말풍선"
           className="hidden md:block h-18.75 w-auto object-contain"
         />
