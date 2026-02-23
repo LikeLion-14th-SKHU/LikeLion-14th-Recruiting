@@ -114,7 +114,7 @@ function Apply() {
           </ul>
         </article>
 
-        <article className="pt-15">
+        <article className="pt-8">
           <div className="mb-3 h-0.5 w-25 bg-gradient" />
           <h3 className="text-2xl md:text-4xl font-semibold text-text-main">
             지원 전에 꼭 읽어주세요
@@ -127,7 +127,7 @@ function Apply() {
         </article>
       </div>
 
-      <div className="pl-10 py-10 md:py-15 w-fit">
+      <div className="pl-5 md:pl-10 py-10 md:py-15 w-fit">
         <ApplySection />
       </div>
 
