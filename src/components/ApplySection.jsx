@@ -50,9 +50,9 @@ function ApplySection() {
 
   const countdownText = isEnded
     ? "모집이 종료되었습니다"
-    : `마감까지 ${pad(timeLeft.days)}D-${pad(timeLeft.hours)}H-${pad(
+    : `마감까지 ${pad(timeLeft.days)}Day-${pad(timeLeft.hours)}:${pad(
         timeLeft.minutes,
-      )}M-${pad(timeLeft.seconds)}S`;
+      )}:${pad(timeLeft.seconds)}`;
 
   return (
     <div className="flex flex-col md:flex-row gap-4 md:gap-5">
@@ -98,7 +98,7 @@ function ApplySection() {
           className="hidden md:block h-18.75 w-auto object-contain"
         />
         <span
-          className="absolute inset-0 flex md:items-center justify-start md:justify-center md:mb-3  text-base md:text-[30px] pt-3.75 pl-3 md:pl-7"
+          className="absolute inset-0 flex md:items-center justify-start md:justify-center md:mb-3  text-base md:text-[30px] pt-3.75 pl-5.5 md:pl-7"
           style={{
             background: "linear-gradient(to left, #FF4D00, #FFA100)",
             WebkitBackgroundClip: "text",
