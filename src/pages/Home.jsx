@@ -12,7 +12,7 @@ function Home() {
       </div>
 
       {/* 메인 카피 */}
-      <h1 className="text-primary-point2 text-2xl md:text-5xl font-semibold leading-16.25 mb-5 md:mb-8 my-8 md:my-8 ">
+      <h1 className="text-primary-point2 text-2xl md:text-5xl font-semibold md:leading-15 mb-5 md:mb-8 my-8 md:my-8 ">
         처음이어도 괜찮습니다
         <br />
         함께 성장하는 경험이 있으니까요

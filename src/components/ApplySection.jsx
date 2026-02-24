@@ -50,9 +50,9 @@ function ApplySection() {
 
   const countdownText = isEnded
     ? "모집이 종료되었습니다"
-    : `마감까지 ${pad(timeLeft.days)}Day-${pad(timeLeft.hours)}:${pad(
+    : `마감까지 ${pad(timeLeft.days)}D-${pad(timeLeft.hours)}H-${pad(
         timeLeft.minutes,
-      )}:${pad(timeLeft.seconds)}`;
+      )}M-${pad(timeLeft.seconds)}S`;
 
   return (
     <div className="flex flex-col md:flex-row gap-4 md:gap-5">
