@@ -29,7 +29,7 @@ function Recruitment() {
     },
     {
       title: "최종 발표",
-      date: "3월 15일 토요일",
+      date: "3월 15일 일요일",
     },
   ];
 
