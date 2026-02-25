@@ -17,19 +17,19 @@ function Recruitment() {
   const timeline = [
     {
       title: "1차 서류",
-      date: "2월 25일 ~ 3월 12일",
+      date: "2월 24일 ~ 3월 6일",
     },
     {
       title: "1차 발표",
-      date: "3월 15일 일요일",
+      date: "3월 8일 일요일",
     },
     {
       title: "2차 면접",
-      date: "3월 16일 ~ 3월 18일",
+      date: "3월 10일 ~ 3월 12일",
     },
     {
       title: "최종 발표",
-      date: "3월 21일 토요일",
+      date: "3월 15일 토요일",
     },
   ];
 
