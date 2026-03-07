@@ -1,7 +1,7 @@
 import { useEffect, useState, memo } from "react";
 
 const RECRUIT_START = new Date("2026-02-24T00:00:00");
-const RECRUIT_END = new Date("2026-03-06T23:59:59");
+const RECRUIT_END = new Date("2026-03-08T23:59:59");
 
 function ApplySection() {
   const [timeLeft, setTimeLeft] = useState({
